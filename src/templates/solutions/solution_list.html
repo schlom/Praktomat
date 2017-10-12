@@ -1,0 +1,184 @@
+{% extends "base.html"%}
+{% load i18n %}
+{% block extrahead %}{{ block.super }}
+<script type="text/javascript" src="{{STATIC_URL}}frameworks/jquery.formset/jquery.formset.min.js"></script>
+<script type="text/javascript">	
+$(function() {
+	$('fieldset.module .form-row').formset({ 
+		prefix: '{{ formset.prefix }}',
+		deleteText: '',
+		deleteCssClass: 'icon icon-orange ui-icon-circle-minus',
+		addText: '',
+		addCssClass: 'icon icon-orange ui-icon-circle-plus'
+	});
+})
+
+$(function(){ 
+	$('form[enctype=multipart/form-data]').submit(function(){ 
+	  	$("#progress").overlay({ 
+	    	top: 272, 
+	    	api: true,
+			closeOnClick: false,
+			closeOnEsc: false, 
+			expose: { 
+	        	color: '#333', 
+	        	loadSpeed: 1000, 
+	        	opacity: 0.9 
+		    }, 
+		}).load();
+	});
+});
+
+ $(document).ready(function(){
+ 	$("#help_icon").tooltip({
+		position:  "center left"
+	});
+ })
+
+</script>
+{% endblock %}
+{% block breadcrumbs %}
+{{block.super}}
+&gt; <a href={% url "task_detail" task_id=task.id%}>{{task.title}}</a>
+&gt; {% if user.is_tutor or user.is_trainer %} <a href={% url "attestation_list" task.id %}>My attestations</a>
+&gt; {{author}}'s solutions{% else %}My solutions{% endif %}
+{% endblock %}
+
+{% block content %}<div id='soluion_upload'>
+
+<h1>{{task.title}}
+{% if user.is_tutor or user.is_trainer %}
+	{% if user|stringformat:"s" != author|stringformat:"s" %}
+		(as seen by {{author}})
+	{% endif %}
+{% endif %}</h1>
+
+
+
+<div class='left'>
+{% comment %}
+Just for Deguging... </br>
+	"Task submission_free_uploads": {{task.submission_free_uploads}},</br>
+	"Task submission_waitdelta": {{task.submission_waitdelta}},</br>
+	"now:" {{ dnow }}, </br>
+	"upload_next_possible_time":{{ upload_next_possible_time}},<br>
+	"next upload possible in":{{ upload_next_possible_time|timeuntil}},<br>
+
+	"Task submission_maxpossible": {{task.submission_maxpossible}},</br>
+	"uploads_left":{{ uploads_left }},<br>				
+	"Task-Submission date " = {{ task.submission_date }} </br>
+	"Time to complete the Task " = {{ task.submission_date|timeuntil }} </br>		
+	
+	{% load tasks_extras %}
+	FreeUploads left = {{ task.submission_free_uploads|uploadsleft:solutions }} </br>
+Just for Deguging... </br>
+{% endcomment %}
+	{% if not task.expired or user.is_tutor or user.is_trainer %}
+		<a>{%trans "Time left:" %} {{ task.submission_date|timeuntil }}</a>
+		
+		{% if solutions %}
+			{% if task.submission_maxpossible > 0 and uploads_left <= 0 %}			
+				{% if user.is_tutor or user.is_trainer %}
+					<h2>{%trans "Upload solution" %}</h2>	  
+						<strong> {%trans "A student couldn't upload now because:" %} </strong></br>
+						{% if task.expired  %}
+						<strong> {%trans "upload time has passed!" %} </strong></br>	
+						{% elif uploads_left <= 0 %}
+							{%trans "the limit of allowed submissions has been reached." %}
+						{% endif %}				
+						<form enctype="multipart/form-data" method="post" action="" > {% csrf_token %}
+							{% include "forms/formset_as_div.html" %}
+							<input type="submit" value="upload" />
+						</form>
+				{% else %}		
+					<h2>{%trans "Upload solution denied" %}</h2>
+						{%trans "You have reached the limit of allowed submissions for this task." %} </br>
+						{%trans "But you can resubmit a former upload out of Solution History." %}
+						
+				{% endif %}		
+			{% elif task.submission_waitdelta > 0 and dnow < upload_next_possible_time %}
+				{% if user.is_tutor or user.is_trainer %}
+					<h2>{%trans "Upload solution" %}</h2>	  
+						<strong> {%trans "A student couldn't upload now because:" %} </strong></br>
+						{% if task.expired  %}
+						<strong> {%trans "upload time has passed!" %} </strong></br>	
+						{% elif dnow < upload_next_possible_time %}
+							{%trans "the current wait-time is: " %} <strong>  {{ upload_next_possible_time|timeuntil }} </strong></br>
+						{% endif %}
+						<form enctype="multipart/form-data" method="post" action="" > {% csrf_token %}
+							{% include "forms/formset_as_div.html" %}
+							<input type="submit" value="upload" />
+						</form>
+				{% else %}					
+					 <h2>{%trans "Upload solution denied for now" %}
+					      {% if task.submission_maxpossible > 0 %}
+					      ( {{ uploads_left }} {%trans "tries left" %} )
+					      {% endif %}
+					  </h2>
+						{%trans "Your current wait-time is:" %} <strong> {{ upload_next_possible_time|timeuntil }} </strong></br>
+						{%trans "But you can resubmit a former upload out of Solution History." %}
+				  {% endif %}
+			{% else %}									
+				<h2>{%trans "Upload solution" %}
+				    {% if task.submission_maxpossible > 0 %}
+				    ( {{ uploads_left }} {%trans "tries left" %} )
+				    {% endif %}				    
+				</h2>
+				{# From Django-Docs: Use of both and and or clauses within the same tag is allowed, with and having higher precedence than or #}
+				{% if task.expired and user.is_tutor or task.expired and user.is_trainer %}
+				<strong> {%trans "A student couldn't upload now because: upload time has passed!" %} </strong></br>
+				{% endif %}
+				<form enctype="multipart/form-data" method="post" action="" > {% csrf_token %}
+					{% include "forms/formset_as_div.html" %}
+					<input type="submit" value="upload" />
+				</form>
+			{% endif %}
+		{% else %}	
+			<h2>{%trans "Upload solution" %}
+			    {% if task.submission_maxpossible > 0 %}
+			    ( {{ uploads_left }} {%trans "tries left" %} )
+			    {% endif %}				    
+			</h2>	  
+			<form enctype="multipart/form-data" method="post" action="" > {% csrf_token %}
+				{% include "forms/formset_as_div.html" %}
+				<input type="submit" value="upload" />
+			</form>
+		{% endif %}
+	{% else %}
+		<h2>{%trans "Upload solution" %}</h2> 
+		{%trans "The deadline has passed. Therefore (re)submission is not possible." %}
+	{% endif %}
+</div>
+
+<div class='right'>
+	<div id='help_icon'><span class="icon icon-orange ui-icon-info"></span></div>
+	<div class="tooltip"> 
+    	<span class="icon ui-icon-bullet icon-red"></span> <a>Errors</a><br/>
+		<span class="icon ui-icon-bullet icon-orange"></span> <a>Warnings</a><br/> 
+		<span class="icon ui-icon-bullet icon-green"></span> <a>No Warnings</a><br/>  		
+		<span class="icon ui-icon-script"></span> <a>Attest</a><br/> 
+	</div> 
+	<h2>{% trans "Final Solution" %}</h2>
+	{% if final_solution %}
+		{% with final_solution as solution %}
+			{% include "solutions/solution_list_inline.html" %}
+		{% endwith %}
+	{% else %}
+		<span class="icon ui-icon-alert icon-red"></span> {% trans "There is no final solution." %}
+	{% endif %}
+	
+	<h2>{% trans "Solution History" %}</h2>
+	{% for solution in solutions %}
+		{% include "solutions/solution_list_inline.html" %}
+	{% empty %}
+		<span class="icon ui-icon-info icon-orange"></span> {% trans "No solutions have been uploaded." %}
+	{%endfor%}
+</div>
+
+<div class="simple_overlay" id="progress"> 
+	<!-- spinner from http://ajaxload.info/ -->
+	<img id="spinner" src="{{STATIC_URL}}images/loading.gif" alt="loading" />
+    <p>Please wait while your solution is examined.</p>
+</div> 
+
+</div>{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %} {% load chunks %}
+
+{% block breadcrumbs %}
+	{{ block.super }} &gt; {% trans 'Login' %}
+{% endblock %}
+
+{% block content %}<div id="login">
+{% chunk "Login Message" %}	
+
+<div id="form">	
+    {% if REGISTRATION_POSSIBLE %}
+	<span class="icon ui-icon-triangle-1-e"></span><a href="{% url "registration_register" %}">{% trans 'Registration' %}</a>
+	/
+	{% endif %} 
+
+    {% if ACCOUNT_CHANGE_POSSIBLE %}
+	<span class="icon ui-icon-triangle-1-e"></span><a href="{% url "password_reset" %}">{% trans 'Retrieve password' %}</a>
+    {% endif %}
+	
+	<form method="post" action=".">{% csrf_token %}
+	    {% include "forms/form_as_div.html" %}
+		<input type="submit" value="Login" />
+		<input type="hidden" name="next" value="{{ next }}" />
+	</form>
+</div>
+</div>
+{% endblock %}
