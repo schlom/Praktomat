@@ -1,0 +1,3013 @@
+# Translators:
+# Armin Lehmann, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Praktomat\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-14 22:38+0200\n"
+"PO-Revision-Date: 2016-09-13 22:38+0200\n"
+"Last-Translator: noname <EMAIL@ADDRESS>\n"
+"Language-Team: German <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Praktomat/documentation/ExampleChecker.py:15
+msgid "This text will be displayed under Charfield in the admin."
+msgstr "Dieser Text wird in einem Char-Feld dargestellt als Admin"
+
+#: Praktomat/src/configuration/models.py:14
+msgid "Setting"
+msgstr "Einstellungen"
+
+#: Praktomat/src/configuration/models.py:15
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: Praktomat/src/accounts/admin.py:31
+msgid "Personal info"
+msgstr "Persönliche Informationen"
+
+#: Praktomat/src/accounts/admin.py:32
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+#: Praktomat/src/accounts/admin.py:33
+msgid "Groups"
+msgstr "Gruppen"
+
+#: Praktomat/src/accounts/admin.py:34
+msgid "Important dates"
+msgstr "Wichtige Daten"
+
+#: Praktomat/src/accounts/forms.py:102
+#, python-format
+msgid "Account activation on %s for %s (%s) "
+msgstr "Account aktiviert am %s für %s (%s) "
+
+#: Praktomat/src/accounts/forms.py:105 Praktomat/src/accounts/forms.py:108
+#: Praktomat/src/accounts/views.py:61 Praktomat/src/accounts/views.py:115
+#, python-format
+msgid "Account activation on %s"
+msgstr "Account aktiviert am %s"
+
+#: Praktomat/src/configuration/models.py:22
+msgid "Regular expression used to check the email domain of registering users."
+msgstr "Regular expression um die E-Mail Domain des sich registrierenden Nutzers zu prüfen."
+
+#: Praktomat/src/configuration/models.py:30
+msgid "Regular expression used to check the student number."
+msgstr "Regular expression prüft die Nummer des Studenten."
+
+#: Praktomat/src/configuration/models.py:36
+msgid "If enabled, users previously unknown to the Praktomat can register via sigle sign on (eg. Shibboleth)."
+msgstr "Bei Aktivierung können sich vorher unbekannte Teilnehmer anmelden mittels Single Sign On (z.B. Shibboleth)."
+
+#: Praktomat/src/configuration/models.py:42
+msgid "After this date, registration wont be possible."
+msgstr "Nach Ablauf dieses Datums sind Registrierungen nicht mehr möglich."
+
+#: Praktomat/src/configuration/models.py:48
+msgid "Days until the user has time to activate his account with the link send in the registation email."
+msgstr "Tage die dem Nutzer noch zur Verfügung stehen, um das Benutzerkonto mit dem per E-Mail versendeten Link zu aktivieren."
+
+#: Praktomat/src/configuration/models.py:54
+msgid "If enabled, registrations via the website must be manually validate by a trainer."
+msgstr "Bei Aktivierung müssen die Registrierungen von einem Trainer manuell geprüft werden."
+
+#: Praktomat/src/configuration/models.py:60
+msgid "If enabled, solutions with required checkers, which are not passed, can become the final soution."
+msgstr "Bei Aktivierung können Lösungen, die nicht bestanden wurden, zu finalen Lösungen werden."
+
+#: Praktomat/src/configuration/models.py:65
+msgid "If enabled, the tutor can't see the name of the user, who subbmitted the solution."
+msgstr "Bei Aktivierung kann der Tutor nicht den Namen des Nutzers sehen, der die Lösung eingereicht hat."
+
+#: Praktomat/src/configuration/models.py:71
+msgid "If enabeld, all users can see their final grades."
+msgstr "Bei Aktivierung können alle Nutzer ihre Abschlussbewertungen sehen."
+
+#: Praktomat/src/configuration/models.py:78
+msgid "If enabeld, users will not learn which tutor wrote attestations to his solutions. In particular, tutors will not be named in Attestation-Emails."
+msgstr "Bei Aktivierung wissen die Nutzer nicht, welcher Tutor Bescheinigungen für sie ausgestellt hat. Tutoren werden nicht nametlich erwähnt in den Bescheinigungs-E-Mails."
+
+#: Praktomat/src/configuration/models.py:84
+msgid "Addiotional Reply-To: Address to be set for Attestation emails."
+msgstr "Zusätzliche Antwort an: Adresse die Bescheinigungs-E-Mails erhalten soll."
+
+#: Praktomat/src/configuration/models.py:90
+msgid ""
+"If enabled, tutors can re-run all checkers for solutions they attest. "
+"Can be used to re-run checks that failed due to problems unrelated to the solution "
+"(e.g.: time-outs because of high server-load), but needs to be used with care, "
+"since it may change the results from what the student saw when he submitted his solution."
+msgstr ""
+"Bei Aktivierung können Tutoren alle Teste erneut auf die Lösungen anwenden die sie bescheinigen. "
+"Kann genutzt werden, um die Tests die nicht bestanden wurden erneut durchzuführen. "
+"Z.B. könnten Time-Out aufgrund hoher Server-Last dafür verantwortlich sein. "
+"Dies sollte aber mit Bedacht genutzt werden, da bereits existierende Bewertungen, "
+"die ein Student schon sah, überschrieben werden könnten."
+
+#: Praktomat/src/configuration/models.py:97
+msgid "Default settings for jPlag"
+msgstr "Standardeinstellungen für jPlag"
+
+#: Praktomat/src/accounts/models.py:25
+msgid "The tutorial the student belongs to."
+msgstr "Die Übung zudem der Student gehört."
+
+#: Praktomat/src/accounts/models.py:27
+msgid "The final grade for the whole class."
+msgstr "Das finale Ergebnis für den gesamten Kurs."
+
+#: Praktomat/src/accounts/models.py:28
+msgid "The programme the student is enlisted in."
+msgstr "Das Programm für das der Student eingeschrieben ist."
+
+#: Praktomat/src/accounts/models.py:29
+msgid "activation key"
+msgstr "Aktivierungs Schlüssel"
+
+#: Praktomat/src/accounts/models.py:36
+msgid "Users"
+msgstr "Nutzer"
+
+#: Praktomat/src/accounts/models.py:195
+msgid "The name of the tutorial"
+msgstr "Der Name der Übung"
+
+#: Praktomat/src/accounts/models.py:197
+msgid "The tutors in charge of the tutorium."
+msgstr "Die Übung für die die Tutoren zuständig sind."
+
+#: Praktomat/src/accounts/models.py:201
+msgid "Tutors"
+msgstr "Tutoren"
+
+#: Praktomat/src/accounts/models.py:207
+msgid "Tutorial"
+msgstr "Übung"
+
+#: Praktomat/src/accounts/models.py:208
+msgid "Tutorials"
+msgstr "Übungen"
+
+#: Praktomat/src/attestation/models.py:27
+#: Praktomat/src/checker/checker/AutoAttestChecker.py:25
+msgid "Comment which is shown to the user."
+msgstr "Kommentar das dem Benutzer gezeigt wird"
+
+#: Praktomat/src/attestation/models.py:28
+#: Praktomat/src/checker/checker/AutoAttestChecker.py:26
+msgid "Comment which is only visible to tutors"
+msgstr "Kommentar das nur dem Tutoren sichtbar ist"
+
+#: Praktomat/src/attestation/models.py:29
+msgid "The mark for the whole solution."
+msgstr "Die Note für die komplette Lösung"
+
+#: Praktomat/src/attestation/models.py:30
+#: Praktomat/src/checker/checker/AutoAttestChecker.py:27
+msgid "Indicates whether the attestation is ready to be published"
+msgstr "Zeigt an, ob die Bescheinigung veröffentlicht werden kann"
+
+#: Praktomat/src/attestation/models.py:31
+#: Praktomat/src/checker/checker/AutoAttestChecker.py:28
+msgid "Indicates whether the user can see the attestation."
+msgstr "Zeigt an, ob der Benutzer die Bescheinigung sehen kann."
+
+#: Praktomat/src/attestation/models.py:33
+msgid "The Date/Time the attestation was published."
+msgstr "Das Datum und die Zeit an dem die Bescheinigung veröffentlicht wurde."
+
+#: Praktomat/src/attestation/models.py:55
+#, python-format
+msgid "New attestation for your solution of the task '%s'"
+msgstr "Neue Bescheinigung für Ihre Lösung der Übung '%s'"
+
+#: Praktomat/src/attestation/models.py:89
+#, python-format
+msgid "Attestation for your solution of the task '%s' withdrawn"
+msgstr "Bescheinigung für Lösung der Übung '%s' verworfen"
+
+#: Praktomat/src/attestation/models.py:100
+msgid "The content of the solution file annotated by the tutor."
+msgstr "Der Inhalt der Lösung wurde vom Tutor kommentiert."
+
+#: Praktomat/src/attestation/models.py:123
+msgid "The Name of the Aspect to be rated. E.g.: \"Readabylity\""
+msgstr "Der Name des Gesichtspunkts der gewertet werden soll. Z.B.: \"Lesbarkeit\""
+
+#: Praktomat/src/attestation/models.py:124
+msgid ""
+"Description of the Aspect and how it should be rated. E.w.: \"How well is "
+"the code structured?\""
+msgstr ""
+"Beschreibung des Gesichtspunkts und wie er gewertet werden soll. Z.B.: \"Wie gut ist "
+"der Quellcode strukturiert?\""
+
+#: Praktomat/src/attestation/models.py:134
+msgid "The Name of the rating scale for the aspects. E.g.: \"School marks\""
+msgstr "Der Name der Wertungsskala für den Gesichtspunkt. Z.B.: \"Schulnoten\""
+
+#: Praktomat/src/attestation/models.py:145
+msgid ""
+"The Name of the item(mark) in the rating scale. E.g.: \"A\" or \"very good\" "
+msgstr ""
+"Der Name des Wertes(Note) in der Wertungsskala. Z.B.: \"1\" oder \"sehr gut\" "
+
+#: Praktomat/src/attestation/models.py:146
+msgid "Defines the order in which the items are sorted. Lowest is best."
+msgstr "Definiert fie Reihenfolge in der die Werte sortiert werden. Niedrigster ist am besten."
+
+#: Praktomat/src/attestation/models.py:174
+msgid ""
+"This JavaScript will calculate a recommend end note for every user based on "
+"final grade of every task."
+msgstr ""
+"Diese JavaScript berechnet eine vorgeschlagene Endnote für jeden Benutzer basierend "
+"auf den Ergebnissen der Aufgaben."
+
+#: Praktomat/src/checker/basemodels.py:56
+msgid ""
+"Determines the order in wich the checker will start. Not necessary "
+"continuously!"
+msgstr ""
+"Legt die Reihenfolge der Checker fest. Nicht fortlaufend notwendig!"
+
+#: Praktomat/src/checker/basemodels.py:60
+msgid "Test results are displayed to the submitter."
+msgstr "Testergebnisse werden dem Einreicher angezeigt."
+
+#: Praktomat/src/checker/basemodels.py:61
+msgid "The test must be passed to submit the solution."
+msgstr "Der Test muss bestanden sein um diesen als Lösung einzureichen."
+
+#: Praktomat/src/checker/basemodels.py:62
+msgid "The test will run on submission time."
+msgstr "Der Test läuft bei Einreichung."
+
+#: Praktomat/src/checker/basemodels.py:63
+msgid "If this test fails, do not display further test results."
+msgstr "Falls der Test fehlschlägt, zeige keine weiteren Testergebnisse."
+
+#: Praktomat/src/checker/basemodels.py:195
+msgid "Indicates whether the test has been passed"
+msgstr "Zeigt an, ob der Test bestanden wurde."
+
+#: Praktomat/src/checker/basemodels.py:196
+msgid "Text result of the checker"
+msgstr "Textergebnis des Checkers"
+
+#: Praktomat/src/checker/basemodels.py:198
+msgid "Runtime in milliseconds"
+msgstr "Laufzeit in Millisekunden"
+
+#: Praktomat/src/checker/basemodels.py:259
+msgid "Artefact produced by a checker"
+msgstr "Durch Checker erstelltes Artefakt"
+
+#: Praktomat/src/checker/checker/AnonymityChecker.py:67
+msgid "Ensure anonymous submission"
+msgstr "Anonyme Einreichung sicherstellen"
+
+#: Praktomat/src/checker/checker/AnonymityChecker.py:73
+msgid "This check fails if a submitted file contains your first or last name."
+msgstr "Diese Test schlägt fehl, falls die eingereichte Datei Ihren Vor- oder Nachnamen beinhaltet."
+
+#: Praktomat/src/checker/checker/AnonymityChecker.py:102
+msgid "The file contains your name or user id:"
+msgstr "Die Datei enthält Ihren Namen oder die Benutzer-Id:"
+
+#: Praktomat/src/checker/checker/AnonymityChecker.py:116
+msgid ""
+"<p>Praktomat supports <em>anonymous marking</em>,\n"
+"i.e. the person who marks only sees your submission, but not your name or "
+"identity.\n"
+"To allow anonymous marking, your name and user id is not allowed to appear "
+"in your submission.<p>\n"
+"Please remove your name and user id and submit again."
+msgstr ""
+"<p>Praktomat unterstützt <em>anonyme Korrekturen</em>,\n"
+"das heißt, die Person welche korrigiert, sieht nur Ihre Einreichung "
+"aber nicht Ihren Namen oder Ihre Identität.\n"
+"Um anonyme Korrekturen zuzulassen, dürfen Ihr Name und Identität in "
+"der Einreichung nicht auftauchen.<p>\n"
+"Bitte entfernen Sie Ihren Namen und Identität und reichen die Lösung nochmal ein."
+
+#: Praktomat/src/checker/checker/CheckStyleChecker.py:15
+#: Praktomat/src/checker/checker/ScriptChecker.py:15
+msgid "Name to be displayed on the solution detail page."
+msgstr "Name der auf der detaillierten Lösungsseite angzeigt werden soll."
+
+#: Praktomat/src/checker/checker/CheckStyleChecker.py:16
+msgid "XML configuration of CheckStyle. See http://checkstyle.sourceforge.net/"
+msgstr "XML Konfiguration von CheckStyle. Siehe http://checkstyle.sourceforge.net/"
+
+#: Praktomat/src/checker/checker/CreateFileChecker.py:19
+msgid "The file that is copied into the sandbox"
+msgstr "Die Datei die in die Sandbox kopiert wird"
+
+#: Praktomat/src/checker/checker/CreateFileChecker.py:20
+msgid ""
+"What the file will be named in the sandbox. If empty, we try to guess the "
+"right filename!"
+msgstr ""
+"Wie die Datei in der Sandbox benannt wird. Falls keine Eingabe getätigt wird,wird versucht "
+"der richtige Name zu erraten!"
+
+#: Praktomat/src/checker/checker/CreateFileChecker.py:21
+msgid "Subfolder in the sandbox which shall contain the file."
+msgstr "Unterordner in der Sandbox, die die Datei enthalten sollte."
+
+#: Praktomat/src/checker/checker/CreateFileChecker.py:22
+msgid ""
+"Unpack the zip file into the given subfolder. (It will be an error if the "
+"file is not a zip file; the filename is ignored.)"
+msgstr ""
+"Entpacken Sie das Zip-File in den Unterordner. (Fehler falls kein Zip-File! "
+"Der Dateiname wird ignoriert.)"
+
+#: Praktomat/src/checker/checker/DejaGnu.py:58
+msgid "The name of the Test"
+msgstr "Der Name des Tests"
+
+#: Praktomat/src/checker/checker/DejaGnu.py:59
+msgid ""
+"In den folgenden DejaGnu-Testfällen werden typischerweise Funktionen "
+"aufgerufen, die beim vorherigen Schritt <EM>Tests einrichten</EM> definiert "
+"wurden.\t Siehe\tauch den Abschnitt <EM>How to write a test case</EM> im <A "
+"TARGET=\"_blank\" HREF=\"http://www.gnu.org/manual/dejagnu/\">DejaGnu-"
+"Handbuch</A>."
+msgstr ""
+"In den folgenden DejaGnu-Testfällen werden typischerweise Funktionen "
+"aufgerufen, die beim vorherigen Schritt <EM>Tests einrichten</EM> definiert "
+"wurden.\t Siehe\tauch den Abschnitt <EM>How to write a test case</EM> im <A "
+"TARGET=\"_blank\" HREF=\"http://www.gnu.org/manual/dejagnu/\">DejaGnu-"
+"Handbuch</A>."
+
+#: Praktomat/src/checker/checker/DejaGnu.py:160
+msgid ""
+"Das Setup benutzt den <A HREF=\"http://www.gnu.org/software/dejagnu/dejagnu."
+"html\">DejaGnu-Testrahmen</A>, um die Programme zu testen. Die in dieser "
+"Datei enthaltenen Definitionen gelten für alle Testfälle dieser Aufgabe. Sie "
+"werden beim Testen in die DejaGnu-Datei <TT>default.exp</TT> geschrieben. "
+"(Vergl. hierzuden Abschnitt <EM>Target dependent procedures</EM> im\t<A HREF="
+"\"http://www.gnu.org/manual/dejagnu/\" TARGET=\"_blank\">DejaGnu-Handbuch</"
+"A>.) Die Variablen PROGRAM und JAVA werden mit dem Programmnamen bzw. dem "
+"Pfad zur Java-Runtime ersetzt."
+msgstr ""
+"Das Setup benutzt den <A HREF=\"http://www.gnu.org/software/dejagnu/dejagnu."
+"html\">DejaGnu-Testrahmen</A>, um die Programme zu testen. Die in dieser "
+"Datei enthaltenen Definitionen gelten für alle Testfälle dieser Aufgabe. Sie "
+"werden beim Testen in die DejaGnu-Datei <TT>default.exp</TT> geschrieben. "
+"(Vergl. hierzuden Abschnitt <EM>Target dependent procedures</EM> im\t<A HREF="
+"\"http://www.gnu.org/manual/dejagnu/\" TARGET=\"_blank\">DejaGnu-Handbuch</"
+"A>.) Die Variablen PROGRAM und JAVA werden mit dem Programmnamen bzw. dem "
+"Pfad zur Java-Runtime ersetzt."
+
+#: Praktomat/src/checker/checker/DiffChecker.py:25
+msgid ""
+"The shell script whose output for the given input file is compared to the "
+"given output file: The substrings JAVA and PROGRAM got replaced by Praktomat "
+"determined values."
+msgstr ""
+"Die Ausgabe des Shell-Scripts wird mit der gegebenen Ausgabedatei verglichen. "
+"Hierzu wird eine Eingabedatei verwendet. Die Zeichenfolgen JAVA und PROGRAM werden "
+"durch den Praktomaten durch festgelegte Werte ersetzt."
+
+#: Praktomat/src/checker/checker/DiffChecker.py:26
+msgid "The file containing the input for the program."
+msgstr "Datei die die Eingaben für das Programm beinhaltet."
+
+#: Praktomat/src/checker/checker/DiffChecker.py:27
+msgid "The file containing the output for the program."
+msgstr "Datei die die Ausgaben für das Programm beinhaltet."
+
+#: Praktomat/src/checker/checker/HaskellTestFrameWorkChecker.py:52
+msgid ""
+"Description of the Testcase. To be displayed on Checker Results page when "
+"checker is unfolded."
+msgstr "Beschreibung des Testcase. Wird in den Testergebnissen angezeigt."
+
+#: Praktomat/src/checker/checker/HaskellTestFrameWorkChecker.py:53
+#: Praktomat/src/checker/checker/JUnitChecker.py:40
+msgid "Name of the Testcase. To be displayed as title on Checker Results page"
+msgstr "Name des Testcase. Wird als Titel auf der Testresultatseite angezeigt."
+
+#: Praktomat/src/checker/checker/HaskellTestFrameWorkChecker.py:54
+#: Praktomat/src/checker/checker/JUnitChecker.py:41
+msgid "space-seperated list of files to be ignored during compilation"
+msgstr "Liste an Dateien, die während der Kompilierung ignoriert werden (space-seperated)."
+
+#: Praktomat/src/checker/checker/HaskellTestFrameWorkChecker.py:55
+msgid "Is a submission required to be Safe (according to GHCs Safe-Mode)?"
+msgstr ""
+
+#: Praktomat/src/checker/checker/HaskellTestFrameWorkChecker.py:58
+msgid "Make the cestcases source available via the checkers result report?"
+msgstr ""
+
+#: Praktomat/src/checker/checker/InterfaceChecker.py:17
+#: Praktomat/src/checker/checker/InterfaceChecker.py:18
+#: Praktomat/src/checker/checker/InterfaceChecker.py:19
+#: Praktomat/src/checker/checker/InterfaceChecker.py:20
+#: Praktomat/src/checker/checker/InterfaceChecker.py:21
+#: Praktomat/src/checker/checker/InterfaceChecker.py:22
+#: Praktomat/src/checker/checker/InterfaceChecker.py:23
+msgid "The name of the interface that must be implemeted."
+msgstr "Name des Interfaces, welches Implementiert werden muss."
+
+#: Praktomat/src/checker/checker/IsabelleChecker.py:19
+msgid "Default heap to use"
+msgstr ""
+
+#: Praktomat/src/checker/checker/IsabelleChecker.py:20
+msgid ""
+"Isabelle theories to be run in trusted mode (Library theories or theories "
+"uploaded using the Create File Checker). Do not include the file extensions. "
+"Separate multiple theories by space"
+msgstr ""
+
+#: Praktomat/src/checker/checker/JUnitChecker.py:37
+msgid "The fully qualified name of the test case class (without .class)"
+msgstr "FQN der Testcase-Klasse (ohne .class)"
+
+#: Praktomat/src/checker/checker/JUnitChecker.py:39
+msgid ""
+"Description of the Testcase. To be displayed on Checker Results page when "
+"checker is  unfolded."
+msgstr ""
+"Beschreibung des Testcase. Wird in den Testergebnissen angezeigt."
+
+#: Praktomat/src/checker/checker/KeepFileChecker.py:17
+msgid "The name of the file to preserve (e.g. out.txt)"
+msgstr "Name der Datei die aufbewahrt werden soll (z.B. out.txt)"
+
+#: Praktomat/src/checker/checker/LineCounter.py:25
+msgid "Lexical statistics"
+msgstr "Lexikalische Statistiken"
+
+#: Praktomat/src/checker/checker/LineCounter.py:31
+msgid "This check is always passed."
+msgstr "Dieser Test wird immer bestanden."
+
+#: Praktomat/src/checker/checker/LineCounter.py:116
+#, python-brace-format
+msgid ""
+"{0} lines, including {1} code lines ({2}%), {3} comment lines ({4}%), {5} "
+"both ({6}%)."
+msgstr ""
+
+#: Praktomat/src/checker/checker/LineCounter.py:148
+#, python-brace-format
+msgid ""
+"{0} files, {1} lines, including {2} code lines ({3}%), {4} comment lines "
+"({5}%), {6} both ({7}%)."
+msgstr ""
+"{0} Dateien, {1} Zeilen, beinhalten {2} Zeilen Code ({3}%), {4} Kommentierte Zeilen "
+"({5}%), {6} Beides ({7}%)."
+
+#: Praktomat/src/checker/checker/LineWidthChecker.py:17
+msgid "The maximum length of a line of code."
+msgstr "Maximale Zeilenbreite"
+
+#: Praktomat/src/checker/checker/LineWidthChecker.py:18
+msgid "The amount of characters a tab represents."
+msgstr "Anzahl der Zeichen die einen Tab repräsentieren."
+
+#: Praktomat/src/checker/checker/LineWidthChecker.py:19
+msgid ""
+"Regular expression describing the filenames to be checked. Case Insensetive. "
+"Blank: use all files."
+msgstr ""
+"Regular Expression die definiert, welche Dateinamen überprüft werden sollen. "
+"Case Insensetive. Leer: Alle Dateien."
+
+#: Praktomat/src/checker/checker/LineWidthChecker.py:20
+msgid ""
+"Regular expression describing included filenames, which shall be excluded. "
+"Case Insensetive. Blank: use all files."
+msgstr ""
+"Regular Expression die definiert, welche Dateinamen ausgeschlossen werden sollen. "
+"Case Insensetive. Leer: Alle Dateien."
+
+#: Praktomat/src/checker/checker/RChecker.py:16
+msgid ""
+"R script to execute. If left blank, it will run any *.R file, as long as "
+"there is only one."
+msgstr ""
+
+#: Praktomat/src/checker/checker/RChecker.py:19
+msgid "Require the script to create an Rplots.pdf file."
+msgstr ""
+
+#: Praktomat/src/checker/checker/RChecker.py:23
+msgid "If the R script creates a Rplots.pdf file, keep it."
+msgstr ""
+
+#: Praktomat/src/checker/checker/ScriptChecker.py:16
+msgid ""
+"A script (e.g. a shell script) to run. Its output will be displayed to the "
+"user (if public), the checker will succeed if it returns an exit code of 0. "
+"The environment will contain the variables JAVA and PROGRAM."
+msgstr ""
+"Ein Script (z.B. ein Shell Script), das ausgefürt werden soll. Die Ausgabe wird dem Benutzer angezeigt "
+"(wenn Public). Der Test ist erfolgreich bei Exit Code 0. Die Variablen JAVA und PROGRAM werden gesetzt."
+
+#: Praktomat/src/checker/checker/ScriptChecker.py:17
+msgid "Regular expression describing passages to be removed from the output."
+msgstr "Regular Expression die beschreibt, welche Abschnitte der Ausgabe entfernt werden sollen."
+
+#: Praktomat/src/checker/checker/ScriptChecker.py:18
+msgid ""
+"If the script doesn't return HTML it will be enclosed in &lt; pre &gt; tags."
+msgstr ""
+"Falls das Script kein HTML zurückliefert, wird die Rückgabe mit &lt; pre &gt; umschlossen."
+
+#: Praktomat/src/checker/checker/TextChecker.py:15
+msgid "The text that has to be in the solution."
+msgstr "Text der in der eingereichten Lösung vorkommen muss."
+
+#: Praktomat/src/checker/compiler/Builder.py:31
+msgid "Compiler flags"
+msgstr "Compiler Flags"
+
+#: Praktomat/src/checker/compiler/Builder.py:32
+#, python-format
+msgid "Output flags. '%s' will be replaced by the program name."
+msgstr "Output flags. '%s' werden durch den Programmnamen ersetzt."
+
+#: Praktomat/src/checker/compiler/Builder.py:33
+msgid "Compiler libraries"
+msgstr "Compiler Bibliotheken"
+
+#: Praktomat/src/checker/compiler/Builder.py:34
+msgid ""
+"Regular expression describing all source files to be passed to the compiler."
+msgstr ""
+"Regular Expression beschreibt, welche Dateien an den Compiler weitergereicht werden."
+
+#: Praktomat/src/checker/compiler/Builder.py:35
+msgid "Is a submission required to provide a main method?"
+msgstr "Muss die Einreichung eine main-Methode enthalten?"
+
+#: Praktomat/src/solutions/forms.py:35
+#, python-format
+msgid "The file of type %s is not supported."
+msgstr "Die Datei vom Typ %s wird nicht unterstützt."
+
+#: Praktomat/src/solutions/forms.py:40
+msgid "The zip file seams to be corrupt."
+msgstr "Die Zip-Datei scheint korrupt zu sein."
+
+#: Praktomat/src/solutions/forms.py:42
+msgid "The zip file is to big."
+msgstr "Die Zip-Datei ist zu groß."
+
+#: Praktomat/src/solutions/forms.py:48
+#, python-format
+msgid ""
+"The file '%(file)s' of guessed mime type '%(type)s' in this zip file is not "
+"supported."
+msgstr ""
+"Die Datei '%(file)s' des erkannten MIME-Type '%(type)s' innerhalb der Zip-Datei "
+"wird nicht unterstützt."
+
+#: Praktomat/src/solutions/forms.py:55 Praktomat/src/solutions/forms.py:81
+msgid "Uhoh - something unexpected happened."
+msgstr "Achtung - etwas unerwartetes trat auf."
+
+#: Praktomat/src/solutions/forms.py:63 Praktomat/src/solutions/forms.py:79
+msgid "The tar file is to big."
+msgstr "Die Tar-Datei ist zu groß."
+
+#: Praktomat/src/solutions/forms.py:71
+#, python-format
+msgid ""
+"The file '%(file)s' of guessed mime type '%(type)s' in this tar file is not "
+"supported."
+msgstr ""
+"Die Datei '%(file)s' des erkannten MIME-Type '%(type)s' innerhalb der Tar-Datei "
+"wird nicht unterstützt."
+
+#: Praktomat/src/solutions/forms.py:83
+#, python-format
+msgid "The file '%(file)s' is bigger than %(size)iKB which is not supported."
+msgstr "Die Datei '%(file)s' ist größer als %(size)iKB."
+
+#: Praktomat/src/solutions/forms.py:90
+msgid "You must at least choose one file."
+msgstr "Mindestens eine Datei muss ausgewählt werden."
+
+#: Praktomat/src/solutions/models.py:36
+msgid ""
+"Id unique in task and user.Eg. Solution 1 of user X in task Y in contrast to "
+"global solution Z"
+msgstr ""
+"ID einzigartig in Aufgabe und Benutzer. Z.B.: Lösung 1 von Benutzer X in der Aufgabe Y "
+"im Vergleich zu der allgemeinen Lösung Z"
+
+#: Praktomat/src/solutions/models.py:42
+msgid "Indicates whether this solution is a test upload."
+msgstr "Zeigt an, ob die Lösung ein Test-Upload ist."
+
+#: Praktomat/src/solutions/models.py:43
+msgid ""
+"Indicates whether the solution has passed all public and required tests."
+msgstr ""
+"Zeigt an, ob alle öffentlichen und notwendigen Test für die Lösung bestanden wurden."
+
+#: Praktomat/src/solutions/models.py:44
+msgid ""
+"Indicates whether the solution has at least failed one public and not "
+"required tests."
+msgstr ""
+"Zeigt an, ob mindestens ein öffentlicher und kein notwendiger Test für die Lösung "
+"fehlgeschlagen ist."
+
+#: Praktomat/src/solutions/models.py:45
+msgid "Indicates whether the solution is a rip-off of another one."
+msgstr "Zeigt an, ob die Lösung ein Plagiat einer anderen ist."
+
+#: Praktomat/src/solutions/models.py:46
+msgid "Indicates whether this solution is the last (accepted) of the author."
+msgstr "Zeigt an, ob die Lösung die letzte (akzeptierte) des Autors ist."
+
+#: Praktomat/src/solutions/models.py:138
+msgid ""
+"Source code file as part of a solution an archive file (.zip, .tar or .tar."
+"gz) containing multiple solution files."
+msgstr ""
+"Die Quellcodedatei als Teil einer Lösung eine Archive-Datei (.zip, .tar oder "
+".tar.gz) beinhaltet mehrere Lösungsdateien."
+
+#: Praktomat/src/solutions/models.py:139
+msgid "Guessed file type. Automatically  set on save()."
+msgstr "Geschätzter Dateityp. Automatisch auf save() gesetzt."
+
+#: Praktomat/src/solutions/views.py:77
+#, python-format
+msgid "%s submission confirmation"
+msgstr "%s Bestätigte Einreichung"
+
+#: Praktomat/src/tasks/admin.py:182 Praktomat/src/tasks/admin.py:184
+#, python-format
+msgid "[%s] lost final submission confirmation"
+msgstr "[%s] abschließende Bestätigung der Einreichung verloren"
+
+#: Praktomat/src/tasks/admin.py:186
+#, python-format
+msgid "%s lost final submission confirmation"
+msgstr "%s abschließende Bestätigung der Einreichung verloren"
+
+#: Praktomat/src/tasks/models.py:28
+msgid "The name of the Task"
+msgstr "Der Name für die Aufgabe"
+
+#: Praktomat/src/tasks/models.py:29
+msgid "Description of the assignment."
+msgstr "Erläuterung zur Aufgabe."
+
+#: Praktomat/src/tasks/models.py:30
+msgid "The time on which the user will see the task."
+msgstr "Ab wann der Benutzer die Aufgabe sehen kann."
+
+#: Praktomat/src/tasks/models.py:31
+msgid ""
+"The time up until the user has time to complete the task. This time will be "
+"extended by one hour for those who just missed the deadline."
+msgstr ""
+"Bis wann die Nutzer Zeit haben die Aufgabe zu lösen. Die Zeit wird um eine Stunde "
+"verlängert für jene die die Abgabefrist verpasst haben."
+
+#: Praktomat/src/tasks/models.py:33
+msgid "Number of submissions a user can make before waitdelta got active"
+msgstr "Anzahl an Einreichungen die ein Nutzer tätigen kann, bevor eine Wartezeit (waitdelta) aktiv wird."
+
+#: Praktomat/src/tasks/models.py:34
+msgid ""
+"Timedelta in minutes. The user must wait before submitting the next solution "
+"of same task: Timedelta multiplied with number of current uploads"
+msgstr ""
+"Wartezeit in Minuten. Nutzer muss diese Zeit warten, bevor er eine weitere Lösung einreichen darf:\n"
+"Die Wartezeit wird mit der Anzahl der aktuellen Einreichungen multipliziert!!!"
+
+#: Praktomat/src/tasks/models.py:35
+msgid ""
+"Number of uploads a user can submit for the same task. Value -1 means "
+"unlimited"
+msgstr ""
+"Anzahl an Einreichungen, die ein Benutzer für diese Aufgabe zur Verfügung hat. "
+"-1 bedeutet unbegrenzt"
+
+#: Praktomat/src/tasks/models.py:37
+msgid ""
+"Regular Expression describing the mime types of solution files that the user "
+"is allowed to upload."
+msgstr ""
+"Regular Expression die die MIME Types definiert, die Benutzer hochladen dürfen."
+
+#: Praktomat/src/tasks/models.py:38
+msgid "The maximum size of an uploaded solution file in kilobyte."
+msgstr "Maximale Größe einer hochgeladenen Datei in Kilobyte"
+
+#: Praktomat/src/tasks/models.py:41
+msgid ""
+"Indicates whether the checker which don't run immediately on submission have "
+"been executed."
+msgstr ""
+"Zeigt an,ob der Checker, der nicht direkt bei Einreichung lief, durchgeführt wurde."
+
+#: Praktomat/src/tasks/models.py:42
+msgid "The scale used to mark the whole solution."
+msgstr "Skala zur Bewertung für die Lösungen."
+
+#: Praktomat/src/tasks/models.py:43
+msgid ""
+"Indicates that only trainers may publish attestations. Otherwise, tutors may "
+"publish final attestations within their tutorials."
+msgstr ""
+"Zeigt an, dass nur Trainer Bescheinigung veröffentlichen können. Ansonsten können Tutoren "
+"Bescheinigung innerhalb ihrer Übungen veröffentlichen."
+
+#: Praktomat/src/tasks/models.py:44
+msgid "No new solution uploads since the last jPlag run"
+msgstr "Es wurden keine neuen Lösungen hochgeladen seit der letzten Ausführung von JPlag"
+
+#: Praktomat/src/templates/404.html:5
+msgid "Error 404"
+msgstr "Error 404"
+
+#: Praktomat/src/templates/500.html:5
+msgid "Error 500"
+msgstr "Error 500"
+
+#: Praktomat/src/templates/access_denied.html:5
+msgid "Access denied"
+msgstr "Zutritt verweigert"
+
+#: Praktomat/src/templates/admin/accounts/user/change_list.html:9
+#: Praktomat/src/templates/admin/tasks/task/change_list.html:9
+#, python-format
+msgid "Import %(name)s"
+msgstr "Importiere %(name)s"
+
+#: Praktomat/src/templates/admin/accounts/user/change_list.html:14
+#: Praktomat/src/templates/admin/accounts/user/import_tutorial_assignment.html:16
+msgid "Import tutorial assignment"
+msgstr "Imortiere Übungsaufgabe"
+
+#: Praktomat/src/templates/admin/accounts/user/change_list.html:19
+#: Praktomat/src/templates/admin/attestation/ratingscale/change_list.html:14
+#: Praktomat/src/templates/admin/tasks/task/change_list.html:14
+#, python-format
+msgid "Add %(name)s"
+msgstr "Füge %(name)s hinzu"
+
+#: Praktomat/src/templates/admin/accounts/user/import.html:13
+#: Praktomat/src/templates/admin/accounts/user/import_tutorial_assignment.html:13
+#: Praktomat/src/templates/admin/attestation/ratingscale/generate.html:13
+#: Praktomat/src/templates/admin/auth/group/import_matriculation_list.html:8
+#: Praktomat/src/templates/admin/tasks/task/import.html:13
+msgid "Home"
+msgstr "Home"
+
+#: Praktomat/src/templates/admin/accounts/user/import.html:16
+msgid "Import User"
+msgstr "Importiere Nutzer"
+
+#: Praktomat/src/templates/admin/accounts/user/import.html:26
+#: Praktomat/src/templates/admin/accounts/user/import_tutorial_assignment.html:26
+#: Praktomat/src/templates/admin/attestation/ratingscale/generate.html:26
+#: Praktomat/src/templates/admin/auth/group/import_matriculation_list.html:21
+#: Praktomat/src/templates/admin/tasks/task/import.html:26
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Bitte korrigieren sie den nachstehenden Fehler"
+msgstr[1] "Bitte korrigieren sie die nachstehenden Fehler"
+
+#: Praktomat/src/templates/admin/accounts/user/import.html:36
+#: Praktomat/src/templates/admin/accounts/user/import_tutorial_assignment.html:36
+#: Praktomat/src/templates/admin/attestation/ratingscale/generate.html:36
+#: Praktomat/src/templates/admin/auth/group/import_matriculation_list.html:31
+#: Praktomat/src/templates/admin/tasks/task/import.html:36
+msgid "Save"
+msgstr "Speichern"
+
+#: Praktomat/src/templates/admin/attestation/ratingscale/change_list.html:9
+#, python-format
+msgid "Generate %(name)s"
+msgstr "Generiere %(name)s"
+
+#: Praktomat/src/templates/admin/attestation/ratingscale/generate.html:16
+msgid "Generate ratingScale"
+msgstr "Generiere Bewertungsskala"
+
+#: Praktomat/src/templates/admin/auth/group/change_form.html:8
+msgid "Assign by matriculation number"
+msgstr "Per Matrikelnummer zuordnen"
+
+#: Praktomat/src/templates/admin/auth/group/change_form.html:9
+#: Praktomat/src/templates/admin/tasks/task/change_form.html:8
+msgid "History"
+msgstr "Verlauf"
+
+#: Praktomat/src/templates/admin/tasks/task/change_form.html:17
+#: Praktomat/src/templates/admin/tasks/task/change_form.html:31
+msgid "Model Solution"
+msgstr "Musterlösung"
+
+#: Praktomat/src/templates/admin/tasks/task/change_form.html:20
+#: Praktomat/src/templates/admin/tasks/task/change_form.html:34
+msgid "Save this task to add a model solution"
+msgstr "Aufgabe speichern, um eine Musterlösung hinzuzufügen"
+
+#: Praktomat/src/templates/admin/auth/group/change_form.html:10
+#: Praktomat/src/templates/admin/tasks/stacked.html:9
+#: Praktomat/src/templates/admin/tasks/task/change_form.html:9
+msgid "View on site"
+msgstr "Auf Seite anzeigen"
+
+#: Praktomat/src/templates/admin/auth/group/import_matriculation_list.html:9
+msgid "Auth"
+msgstr "Autentifizierung"
+
+#: Praktomat/src/templates/admin/auth/group/import_matriculation_list.html:10
+msgid "Group"
+msgstr "Gruppe"
+
+#: Praktomat/src/templates/admin/auth/group/import_matriculation_list.html:11
+msgid "Import matriculation list"
+msgstr "Importiere Matrikelnummernliste"
+
+#: Praktomat/src/templates/admin/base_site.html:4
+#, python-format
+msgid "Praktomat admin: %(title)s"
+msgstr "Praktomat-Administrator: %(title)s"
+
+#: Praktomat/src/templates/admin/base_site.html:7
+#, python-format
+msgid "%(SITE_NAME)s: Admin"
+msgstr "%(SITE_NAME)s: Admin"
+
+#: Praktomat/src/templates/admin/base_site.html:10
+msgid "User site"
+msgstr "Nutzeransicht"
+
+#: Praktomat/src/templates/admin/tasks/stacked.html:64
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr "Weiteren hinzufügen %(verbose_name)s"
+
+#: Praktomat/src/templates/admin/tasks/stacked.html:67
+msgid "Remove"
+msgstr "Entfernen"
+
+#: Praktomat/src/templates/admin/tasks/task/change_form.html:7
+msgid "Download Final Solutions"
+msgstr "Finale Lösung herunterladen"
+
+#: Praktomat/src/templates/admin/tasks/task/import.html:14
+#: Praktomat/src/tasks/models.py:27
+msgid "Tasks"
+msgstr "Aufgaben"
+
+#: Praktomat/src/templates/admin/tasks/task/import.html:15
+#: Praktomat/src/templates/attestation/attestation_edit.html:103
+#: Praktomat/src/templates/attestation/attestation_edit.html:115
+#: Praktomat/src/tasks/models.py:26
+msgid "Task"
+msgstr "Aufgabe"
+
+#: Praktomat/src/templates/admin/tasks/task/import.html:16
+msgid "Import Task"
+msgstr "Aufgabe importieren"
+
+#: Praktomat/src/templates/admin/tasks/task/model_solution.html:23
+#: Praktomat/src/templates/attestation/attestation_edit.html:133
+#: Praktomat/src/templates/attestation/attestation_edit.html:151
+#: Praktomat/src/templates/attestation/attestation_view.html:85
+#: Praktomat/src/templates/solutions/checker_result_list.html:29
+msgid "Checker results"
+msgstr "Testergebnisse"
+
+#: Praktomat/src/templates/solutions/checker_result_list.html:34
+msgid "Name"
+msgstr "Name"
+
+#: Praktomat/src/templates/solutions/checker_result_list.html:35
+msgid "Matriklnr"
+msgstr "Marikelnummer"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:23
+msgid "Existing Attestations"
+msgstr "Existierende Bescheinigungen"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:13
+#: Praktomat/src/templates/attestation/attestation_list.html:48
+msgid "not finished"
+msgstr "nicht abgeschlossen"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:14
+#: Praktomat/src/templates/attestation/attestation_list.html:49
+msgid "final but unpublished"
+msgstr "final aber nicht veröffentlicht"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:15
+#: Praktomat/src/templates/attestation/attestation_list.html:50
+msgid "final and published"
+msgstr "final und veröffentlicht"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:16
+#: Praktomat/src/templates/attestation/attestation_list.html:51
+msgid "view only"
+msgstr "nur einsehen"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:56
+msgid "Upload a test solution"
+msgstr "Testlösung hochladen"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:57
+msgid "Download all solutions"
+msgstr "Alle Lösungen downloaden"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:58
+msgid "Download all solutions, including checker files"
+msgstr "Alle Lösungen und Testdateien downloaden"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:89
+msgid "Unrated"
+msgstr "Nicht Bewertet"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:90
+msgid "Not final"
+msgstr "Nicht Final"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:113
+msgid "Solution by "
+msgstr "Lösung von "
+
+#: Praktomat/src/templates/attestation/attestation_list.html:115
+msgid "All solutions have been attested."
+msgstr "Alle Lösungen wurden attestiert."
+
+#: Praktomat/src/templates/attestation/attestation_list.html:134
+msgid " solutions to attest."
+msgstr " Lösungen zu bewerten."
+
+#: Praktomat/src/templates/attestation/attestation_list.html:139
+msgid "The solutions of"
+msgstr "Die Lösung von"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:139
+msgid " have been marked as plagiarism."
+msgstr " wurde als Plagiat markiert."
+
+#: Praktomat/src/templates/attestation/attestation_list.html:141
+msgid  "solutions have been marked as plagiarism."
+msgstr "Lösungen wurden als Plagiat markiert."
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:20
+msgid "There already are Attestations for the "
+msgstr "Es existieren bereits Bescheinigungen für "
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:20
+msgid "specified solution"
+msgstr "die angegebene Lösung"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:20
+msgid ". Do you want to "
+msgstr ". Möchten Sie "
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:20
+msgid "force the creation"
+msgstr "die Erstellung erzwingen"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:20
+msgid " of another Attestation?"
+msgstr " für eine weitere Bescheinigung?"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:27
+#: Praktomat/src/templates/attestation/attestation_list.html:189
+#: Praktomat/src/templates/attestation/attestation_list.html:224
+msgid "Attestation for "
+msgstr "Bescheinigung für die "
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:27
+#: Praktomat/src/templates/attestation/attestation_edit.html:107
+#: Praktomat/src/templates/attestation/attestation_list.html:189
+#: Praktomat/src/templates/attestation/attestation_list.html:224
+#: Praktomat/src/templates/attestation/attestation_view.html:40
+msgid "Solution "
+msgstr "Lösung "
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:27
+#: Praktomat/src/templates/attestation/attestation_list.html:189
+#: Praktomat/src/templates/attestation/attestation_list.html:224
+msgid " by "
+msgstr " von "
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:32
+#: Praktomat/src/templates/attestation/attestation_list.html:194
+#: Praktomat/src/templates/attestation/attestation_list.html:229
+msgid "Created: "
+msgstr "Erstellt am: "
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:97
+msgid "Solution by: "
+msgstr "Lösung von: "
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:105
+msgid "Model solution"
+msgstr "Musterlösung"
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:108
+msgid "Annotate solution files"
+msgstr "Lösungen kommentieren"
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:109
+msgid "Attest solution"
+msgstr "Lösung bescheinigen"
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:110
+#: Praktomat/src/templates/attestation/attestation_edit.html:195
+#: Praktomat/src/templates/attestation/attestation_edit.html:198
+msgid "Download"
+msgstr "Download"
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:111
+msgid "Download (incl. checker files)"
+msgstr "Download (inkl. Testdateien)"
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:137
+#: Praktomat/src/templates/attestation/attestation_edit.html:155
+msgid "re-run all checkers"
+msgstr "Alle Tests erneut durchführen"
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:161
+msgid "Annotated solution files"
+msgstr "Kommentierte Lösungen"
+
+#: Praktomat/src/templates/attestation/attestation_edit.html:178
+msgid "Editor Options"
+msgstr "Editor-Optionen"
+
+#: Praktomat/src/templates/attestation/attestation_already_exists_for_solution.html:29
+#: Praktomat/src/templates/attestation/attestation_list.html:168
+#: Praktomat/src/templates/attestation/attestation_list.html:191
+#: Praktomat/src/templates/attestation/attestation_list.html:226
+#: Praktomat/src/templates/solutions/solution_detail.html:48
+msgid "Marked as Plagiarism"
+msgstr "Als Plagiat markiert"
+
+#: Praktomat/src/templates/attestation/attestation_email.html:1
+#: Praktomat/src/templates/attestation/attestation_withdraw_email.html:1
+#: Praktomat/src/templates/solutions/submission_confirmation_email.html:1
+#: Praktomat/src/templates/solutions/submission_final_lost_email.html:1
+msgid "Hello "
+msgstr "Hallo"
+
+#: Praktomat/src/templates/attestation/attestation_email.html:4
+#, python-format
+msgid "your solution to the task \"%(task)s\" has been attested."
+msgstr "Ihre Lösung für die Aufgabe \"%(task)s\" wurde bescheinigt."
+
+#: Praktomat/src/templates/attestation/attestation_email.html:6
+#, python-format
+msgid "your solution to the task \"%(task)s\" has been attested by %(by)s."
+msgstr "Ihre Lösung für die Aufgabe \"%(task)s\" wurde bescheinigt von %(by)s."
+
+#: Praktomat/src/templates/attestation/attestation_email.html:13
+#: Praktomat/src/templates/attestation/attestation_withdraw_email.html:5
+#: Praktomat/src/templates/registration/registration_email.html:10
+#: Praktomat/src/templates/solutions/submission_confirmation_email.html:14
+#: Praktomat/src/templates/solutions/submission_final_lost_email.html:16
+msgid "Thanks for using our site!"
+msgstr "Danke für die Nutzung unsrer Seite!"
+
+#: Praktomat/src/templates/attestation/attestation_email.html:15
+#: Praktomat/src/templates/attestation/attestation_withdraw_email.html:7
+#: Praktomat/src/templates/registration/password_reset_email.html:11
+#: Praktomat/src/templates/registration/registration_email.html:12
+#: Praktomat/src/templates/registration/registration_email_manual_to_user.html:8
+#: Praktomat/src/templates/solutions/submission_confirmation_email.html:16
+#: Praktomat/src/templates/solutions/submission_final_lost_email.html:18
+#, python-format
+msgid "The %(site_name)s team"
+msgstr "Das %(site_name)s Team"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:75
+msgid "The task is not yet expired."
+msgstr "Die Aufgabe ist noch nicht ausgelaufen"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:78
+msgid "Not all checker have yet been run."
+msgstr "Noch nicht alle Tests (Checker) wurden ausgeführt."
+
+#: Praktomat/src/templates/attestation/attestation_list.html:84
+msgid "Attestation Progress by Tutor"
+msgstr "Bescheinigungsverlauf Tutor"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:110
+msgid "Unattested solutions"
+msgstr "Unbescheinigte Lösungen"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:146
+#: Praktomat/src/templates/attestation/attestation_edit.html:86
+#: Praktomat/src/templates/attestation/attestation_view.html:35
+msgid "My attestations"
+msgstr "Meine Bescheinigungen"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:177
+msgid "Attestations by other tutors"
+msgstr "Bescheinigungen anderer Tutoren"
+
+#: Praktomat/src/templates/attestation/attestation_list.html:212
+msgid "All attestations"
+msgstr "Alle Bescheinigungen"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:46
+#: Praktomat/src/templates/tasks/task_list.html:72
+#: Praktomat/src/templates/admin/attestation/ratingscale/generate.html:14
+#: Praktomat/src/templates/attestation/attestation_edit.html:184
+#: Praktomat/src/templates/attestation/attestation_view.html:36
+#: Praktomat/src/templates/attestation/attestation_view.html:46
+#: Praktomat/src/attestation/models.py:20
+msgid "Attestation"
+msgstr "Bescheinigung"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:37
+msgid "Preview"
+msgstr "Vorschau"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:39
+msgid "My solutions"
+msgstr "Meine Lösungen"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:52
+msgid "Private Comment"
+msgstr "Privates Kommentar"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:60
+msgid "Comment"
+msgstr "Kommentar"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:67
+msgid "Ratings"
+msgstr "Bewertungen"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:76
+msgid "Final grade: "
+msgstr "Endgültiges Resultat: "
+
+#: Praktomat/src/templates/attestation/attestation_view.html:106
+msgid "Download Solution"
+msgstr "Lösungen herunterladen"
+
+#: Praktomat/src/attestation/models.py:132
+msgid "Rating Scale"
+msgstr "Bewertungsskala"
+
+#: Praktomat/src/attestation/models.py:133
+msgid "Rating Scales"
+msgstr "Bewertungsskalen"
+
+#: Praktomat/src/attestation/models.py:142
+msgid "Rating Scale Item"
+msgstr "Bewertungsskalathema"
+
+#: Praktomat/src/attestation/models.py:143
+msgid "Rating Scales Items"
+msgstr "Bewertungsskalathemen"
+
+#: Praktomat/src/templates/admin/attestation/ratingscale/generate.html:15
+msgid "Rating scales"
+msgstr "Bewertungsskalen"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:97
+#: Praktomat/src/templates/solutions/solution_detail.html:76
+#: Praktomat/src/templates/admin/tasks/task/model_solution.html:31
+msgid "Files"
+msgstr "Dateien"
+
+#: Praktomat/src/templates/attestation/attestation_view.html:107
+msgid "Annotated Files"
+msgstr "Kommentierte Dateien"
+
+#: Praktomat/src/templates/attestation/attestation_withdraw_email.html:3
+#, python-format
+msgid ""
+"the attestation of your solution to the task \"%(task)s\" has been withdrawn "
+"by %(by)s."
+msgstr ""
+"Die Bescheinigung Ihrer Lösung für die Aufgabe \"%(task)s\" wurde zurückgezogen von %(by)s."
+
+#: Praktomat/src/templates/attestation/tutorial_overview.html:48
+msgid "Other Tutorials"
+msgstr "Andere Übungen"
+
+#: Praktomat/src/attestation/models.py:119
+msgid "Rating Aspect"
+msgstr "Bewertungsaspekt"
+
+#: Praktomat/src/templates/attestation/tutorial_overview.html:68
+#: Praktomat/src/attestation/models.py:120
+msgid "Rating Aspects"
+msgstr "Bewertungsaspekte"
+
+#: Praktomat/src/templates/attestation/rating_overview.html:76
+#: Praktomat/src/templates/attestation/rating_overview.html:78
+#: Praktomat/src/templates/attestation/tutorial_overview.html:44
+msgid "Rating Overview"
+msgstr "Bewertungsübersicht"
+
+#: Praktomat/src/templates/attestation/rating_overview.html:90
+#: Praktomat/src/templates/attestation/tutorial_overview.html:131
+msgid "Email all users"
+msgstr "Allen Teilnehmern eine E-Mail senden"
+
+#: Praktomat/src/templates/attestation/rating_overview.html:90
+msgid "Export as csv (utf-8)"
+msgstr "Als CSV (utf-8) exportieren"
+
+#: Praktomat/src/templates/attestation/rating_overview.html:95
+#: Praktomat/src/templates/admin/accounts/user/import_tutorial_assignment.html:15
+#: Praktomat/src/templates/admin/accounts/user/import.html:15
+#: Praktomat/src/templates/attestation/tutorial_overview.html:65
+#: Praktomat/src/accounts/models.py:35
+msgid "User"
+msgstr "Nutzer"
+
+#: Praktomat/src/templates/admin/accounts/user/import_tutorial_assignment.html:14
+#: Praktomat/src/templates/admin/accounts/user/import.html:14
+msgid "Accounts"
+msgstr "Benutzerkonten"
+
+#: Praktomat/src/templates/attestation/rating_overview.html:99
+#: Praktomat/src/templates/attestation/tutorial_overview.html:70
+msgid "Calculated grade"
+msgstr "Berechnete Bewertung"
+
+#: Praktomat/src/templates/attestation/rating_overview.html:100
+#: Praktomat/src/templates/attestation/tutorial_overview.html:71
+msgid "Final grade"
+msgstr "Finale Bewertung"
+
+#: Praktomat/src/templates/attestation/tutorial_overview.html:123
+msgid "Average:"
+msgstr "Durchschnitt:"
+
+#: Praktomat/src/templates/attestation/rating_overview.html:129
+msgid "take all"
+msgstr "Alle übernehmen"
+
+#: Praktomat/src/templates/attestation/statistics.html:399
+#: Praktomat/src/templates/tasks/task_detail.html:19
+#: Praktomat/src/templates/tasks/task_list.html:73
+msgid "Statistics"
+msgstr "Statistiken"
+
+#: Praktomat/src/templates/attestation/statistics.html:401
+msgid ""
+"Shows the dates on which solution submissions were made. "
+"Final submissions indicate when users uploaded their newest solution. "
+"Total submissions shows the percantage of active users who have submitted at least one solution."
+msgstr ""
+"Zeigt die Daten an denen Lösungen eingereicht wurden. "
+"Endgültige Einreichungen weisen darauf hin, dass Nutzer ihre aktuellste Lösung hochgeladen haben. "
+"Gesamte Einreichungen stellen aktive Nutzer in Prozent dar, die mindestens eine Lösung eingereicht haben."
+
+#: Praktomat/src/templates/attestation/statistics.html:403
+msgid "This chart plots on which time of day the users were most active."
+msgstr "Dieses Diagramm zeigt zu welcher Tageszeit die Nutzer am aktivsten waren."
+
+#: Praktomat/src/templates/attestation/statistics.html:406
+msgid "This chart gives an overview of how many attestations are ready to be published and how many of these are already published by the tutors."
+msgstr "Dieses Diagramm gibt eine Übersicht adrüber, wieviele Bescheinigungen für die Veröffentlichung fertiggestellt wurden und wieviele bereits veröffentlicht sind."
+
+#: Praktomat/src/templates/attestation/statistics.html:415
+msgid "Shows the time it took to process each of the checkers."
+msgstr "Zeigt die Zeit, die benötigt wurde um die Tests durchzuführen."
+
+#: Praktomat/src/templates/attestation/tutorial_none.html:5
+msgid "No Tutorial"
+msgstr "Keine Übungen"
+
+#: Praktomat/src/templates/attestation/tutorial_none.html:7
+msgid "You don't supervise any Tutorial."
+msgstr "Sie betreuen keine Übung"
+
+#: Praktomat/src/templates/base.html:34
+msgid "Welcome,"
+msgstr "Willkommen,"
+
+#: Praktomat/src/templates/base.html:40
+msgid "Log-out"
+msgstr "Abmelden"
+
+#: Praktomat/src/templates/base.html:41
+msgid "Rating overview"
+msgstr "Bewertungsübersicht"
+
+#: Praktomat/src/templates/base.html:42
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+#: Praktomat/src/templates/base.html:43
+msgid "My Tutorial"
+msgstr "Meine Übungen"
+
+#: Praktomat/src/templates/base.html:47
+msgid "Register"
+msgstr "Registrieren"
+
+#: Praktomat/src/templates/registration/login.html:5
+msgid "Login"
+msgstr "Login"
+
+#: Praktomat/src/templates/registration/login.html:18
+msgid "Retrieve password"
+msgstr "Passwort zurücksetzten"
+
+#: Praktomat/src/templates/registration/password_change_done.html:5
+#: Praktomat/src/templates/registration/password_change_form.html:5
+#: Praktomat/src/templates/registration/password_change_form.html:10
+msgid "Password change"
+msgstr "Passwort ändern"
+
+#: Praktomat/src/templates/registration/password_change_done.html:10
+msgid "Password change successful"
+msgstr "Passwort ändern war erfolgreich"
+
+#: Praktomat/src/templates/registration/password_change_done.html:12
+msgid "Your password was changed."
+msgstr "Ihr Passwort wurde geändert."
+
+#: Praktomat/src/templates/registration/password_change_form.html:12
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+"Bitte geben Sie das alte Passwort ein und dann geben Sie zweimal das neue Passwort ein."
+
+#: Praktomat/src/templates/registration/password_change_form.html:17
+msgid "Old password:"
+msgstr "Altes Passwort:"
+
+#: Praktomat/src/templates/registration/password_change_form.html:19
+#: Praktomat/src/templates/registration/password_reset_confirm.html:18
+msgid "New password:"
+msgstr "Neues Passwort:"
+
+#: Praktomat/src/templates/registration/password_change_form.html:21
+#: Praktomat/src/templates/registration/password_reset_confirm.html:20
+msgid "Confirm password:"
+msgstr "Passwort bestätigen:"
+
+#: Praktomat/src/templates/registration/password_change_form.html:23
+#: Praktomat/src/templates/registration/password_reset_confirm.html:21
+msgid "Change my password"
+msgstr "Passwort ändern"
+
+#: Praktomat/src/templates/registration/password_reset_complete.html:5
+#: Praktomat/src/templates/registration/password_reset_confirm.html:5
+#: Praktomat/src/templates/registration/password_reset_done.html:5
+#: Praktomat/src/templates/registration/password_reset_form.html:5
+#: Praktomat/src/templates/registration/password_reset_form.html:10
+msgid "Password reset"
+msgstr "Passwort zurücksetzten"
+
+#: Praktomat/src/templates/registration/password_reset_complete.html:10
+msgid "Password reset complete"
+msgstr "Passwort zurücksetzten erfolgreich"
+
+#: Praktomat/src/templates/registration/password_reset_complete.html:12
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Ihr Passwort wurde übernommen. Fahren Sie fort und melden Sie sich an."
+
+#: Praktomat/src/templates/registration/password_reset_complete.html:14
+msgid "Log in"
+msgstr "Anmelden"
+
+#: Praktomat/src/templates/registration/password_reset_confirm.html:12
+msgid "Enter new password"
+msgstr "Geben Sie ein neues Passort ein"
+
+#: Praktomat/src/templates/registration/password_reset_confirm.html:14
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Bitte geben Sie das neue Passwort zweimal ein."
+
+#: Praktomat/src/templates/registration/password_reset_confirm.html:26
+msgid "Password reset unsuccessful"
+msgstr "Passwort zurücksetzten nicht erfolgreich"
+
+#: Praktomat/src/templates/registration/password_reset_confirm.html:28
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Das Zurücksetzten des Passorts ist ungültig. Eventuell wurde dieser schon durchgeführt. "
+"Beantragen Sie ein neuse Passwort."
+
+#: Praktomat/src/templates/registration/password_reset_done.html:10
+msgid "Password reset successful"
+msgstr "Zurücksetzen des Passorts erfolgreich"
+
+#: Praktomat/src/templates/registration/password_reset_done.html:12
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+"Wir haben Ihnen Anweisungen zum erstellen Ihres Passworts an Ihre E-Mail weitergeleitet. "
+"Sie sollten diese E-Mail bald erhalten."
+
+#: Praktomat/src/templates/registration/password_reset_email.html:2
+msgid "You're receiving this e-mail because you requested a password reset"
+msgstr "Sie erhalten diese E-Mail, weil Sie das Zurücksetzen des Passworts beantragt haben"
+
+#: Praktomat/src/templates/registration/password_reset_email.html:3
+#, python-format
+msgid "for your user account at %(site_name)s"
+msgstr "Für Ihren Nutzer Account bei %(site_name)s"
+
+#: Praktomat/src/templates/registration/password_reset_email.html:5
+msgid "Please go to the following page and choose a new password:"
+msgstr "Bitte gehen Sie auf folgende Seite und wählen ein neues Passwort:"
+
+#: Praktomat/src/templates/registration/password_reset_email.html:9
+#: Praktomat/src/templates/registration/registration_email.html:8
+#: Praktomat/src/templates/registration/registration_email_manual_to_user.html:6
+msgid "Your username, in case you've forgotten:"
+msgstr "Ihr Name, falls Sie ihn vergessen haben sollten:"
+
+#: Praktomat/src/templates/registration/password_reset_form.html:12
+msgid ""
+"Forgot your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+"Passwort vergessen? Geben Sie Ihre E-Mail-Adresse an."
+
+#: Praktomat/src/templates/registration/password_reset_form.html:16
+msgid "E-mail address:"
+msgstr "E-Mail-Adresse:"
+
+#: Praktomat/src/templates/registration/password_reset_form.html:16
+msgid "Reset my password"
+msgstr "Mein Passwort zurücksetzten"
+
+#: Praktomat/src/templates/registration/registration_activated.html:5
+msgid "Activation"
+msgstr "Aktivierung"
+
+#: Praktomat/src/templates/registration/registration_activated.html:9
+msgid "Activation successful,Activation unsuccessful"
+msgstr "Aktivierung erfolgreich, Aktivierung nicht erfolgreich"
+
+#: Praktomat/src/templates/registration/registration_activated.html:12
+msgid " You have successfully activated your account. You can now login."
+msgstr "Sie haben Ihren Zugang erfolgreich aktiviert. Sie können sich nun anmelden."
+
+#: Praktomat/src/templates/registration/registration_activated.html:15
+msgid "Your activation has failed due to one of the following reasons:"
+msgstr "Ihre Aktivierung ist fehlgeschlagen aus einem der folgenden Gründe:"
+
+#: Praktomat/src/templates/registration/registration_activated.html:17
+#, python-format
+msgid " The activation period of %(expiration_days)s days has expired. "
+msgstr " Der Aktivierungszeitraum von %(expiration_days)s ist abgelaufen. "
+
+#: Praktomat/src/templates/registration/registration_activated.html:18
+msgid ""
+"The activation code was already succsessfully used. You may try to log in."
+msgstr ""
+"Der Aktivierungscode wurde bereits verwendet. Versuchen Sie sich anzumelden."
+
+#: Praktomat/src/templates/registration/registration_activated.html:19
+msgid "The activation code is invalid."
+msgstr "Der Aktivierungscode ist ungültig."
+
+#: Praktomat/src/templates/registration/registration_activated.html:20
+msgid "An account with the same matnumber was already activated."
+msgstr "Ein Account mit der gleichen Matrikelnummer existiert bereits."
+
+#: Praktomat/src/templates/registration/registration_activation_allowed.html:6
+#: Praktomat/src/templates/registration/registration_complete.html:6
+#: Praktomat/src/templates/registration/registration_form.html:5
+#: Praktomat/src/templates/registration/login.html:13
+msgid "Registration"
+msgstr "Registrierung"
+
+#: Praktomat/src/templates/registration/registration_activation_allowed.html:11
+msgid "Activation enabled"
+msgstr "Aktivierung freigegeben"
+
+#: Praktomat/src/templates/registration/registration_activation_allowed.html:13
+msgid "The user has received an e-Mail containing his activation code."
+msgstr "Der Nutzer hat eine E-Mail erhaltin mit Aktivierungscode."
+
+#: Praktomat/src/templates/registration/registration_view.html:22
+msgid "First name:"
+msgstr "Vorname:"
+
+#: Praktomat/src/templates/registration/registration_view.html:26
+msgid "Second name:"
+msgstr "Nachname:"
+
+#: Praktomat/src/templates/registration/registration_view.html:34
+msgid "Field of study:"
+msgstr "Studiengang:"
+
+#: Praktomat/src/templates/registration/registration_activation_allowed.html:16
+#: Praktomat/src/templates/registration/registration_email_manual_to_staff.html:4
+#: Praktomat/src/templates/registration/registration_view.html:14
+#: Praktomat/src/templates/registration/registration_change.html:19
+#: Praktomat/src/templates/solutions/checker_result_list.html:36
+msgid "Username:"
+msgstr "Benutzername"
+
+#: Praktomat/src/templates/registration/registration_activation_allowed.html:17
+#: Praktomat/src/templates/registration/registration_email_manual_to_staff.html:5
+#: Praktomat/src/templates/registration/registration_view.html:18
+#: Praktomat/src/templates/registration/registration_change.html:27
+msgid "Matr. Number:"
+msgstr "Matrikelnummer:"
+
+#: Praktomat/src/templates/registration/registration_activation_allowed.html:18
+#: Praktomat/src/templates/registration/registration_email_manual_to_staff.html:6
+#: Praktomat/src/templates/registration/registration_view.html:30
+#: Praktomat/src/templates/registration/registration_change.html:23
+msgid "eMail Address:"
+msgstr "E-Mail Adresse:"
+
+#: Praktomat/src/templates/registration/registration_activation_allowed.html:19
+#: Praktomat/src/templates/registration/registration_email_manual_to_staff.html:7
+msgid "Full Name:"
+msgstr "Vollständiger Name:"
+
+#: Praktomat/src/templates/registration/registration_change.html:5
+#: Praktomat/src/templates/registration/registration_change.html:10
+#: Praktomat/src/templates/base.html:38
+msgid "Change Account"
+msgstr "Benutzerkonto ändern"
+
+#: Praktomat/src/templates/registration/registration_change.html:13
+msgid "Change Password"
+msgstr "Passwort ändern"
+
+#: Praktomat/src/templates/registration/registration_complete.html:11
+msgid "Registration successful"
+msgstr "Registrierung erfolgreich"
+
+#: Praktomat/src/templates/registration/registration_complete.html:13
+msgid ""
+"We've e-mailed you instructions for activating your account to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+"Wir haben Ihnen Anweisungen zum erstellen Ihres Passworts an Ihre E-Mail weitergeleitet. "
+"Sie sollten diese E-Mail bald erhalten."
+
+#: Praktomat/src/templates/registration/registration_email.html:2
+#: Praktomat/src/templates/registration/registration_email_manual_to_user.html:2
+#, python-format
+msgid ""
+"You're receiving this e-mail because you registerd an account at "
+"%(site_name)s"
+msgstr ""
+"Sie erhalten diese E-Mail aufgrund einer Registrierung bei %(site_name)s"
+
+#: Praktomat/src/templates/registration/registration_email.html:4
+#, python-format
+msgid ""
+"Please go to the following page to activate your account within "
+"%(expiration_days)s days"
+msgstr ""
+"Bitte gehen Sie auf folgende Seite um Ihren Account innerhalb von %(expiration_days)s zu aktivieren."
+
+#: Praktomat/src/templates/registration/registration_email_manual_to_staff.html:2
+#, python-format
+msgid "A user has registered an account on %(site_name)s"
+msgstr "Ein Nutzer hat einen Account an bei %(site_name)s registriert."
+
+#: Praktomat/src/templates/registration/registration_email_manual_to_staff.html:9
+msgid ""
+"If you want allow this user to activate his account, please visit the "
+"following page"
+msgstr ""
+"Falls Sie dem Nutzer erlauben möchten seinen Account zu aktivieren, dann gehen Sie "
+"auf folgende Seite"
+
+#: Praktomat/src/templates/registration/registration_email_manual_to_staff.html:13
+msgid "Upon visiting that page, the user will be sent his activation key "
+msgstr "Nach Besuch der Seite wird dem Nutzer der Aktischlüssel gesendet "
+
+#: Praktomat/src/templates/registration/registration_email_manual_to_user.html:4
+#, python-format
+msgid ""
+"The %(site_name)s team will shortly validate your registration. You will "
+"then receive a mail with your activation key."
+msgstr ""
+"Das %(site_name)s Team wird in Kürze Ihre Registrierung prüfen. Sie erhalten eine E-Mail mit dem "
+"Aktivierungsschlüssel."
+
+#: Praktomat/src/templates/registration/registration_form.html:10
+msgid "Register a new Account"
+msgstr "Neuen Account registrieren"
+
+#: Praktomat/src/templates/registration/registration_form.html:12
+msgid "The username you choose will also be your public name for the forum and can not be changed after registration."
+msgstr "Der Benutzername den Sie wählen kann nach der Registration nicht geändert werden."
+
+#: Praktomat/src/templates/registration/registration_view.html:5
+#: Praktomat/src/templates/registration/registration_view.html:10
+msgid "View Account"
+msgstr "View Account"
+
+#: Praktomat/src/templates/registration/shib_hello.html:5
+msgid "Shibboleth-Login"
+msgstr "Shibboleth-Login"
+
+#: Praktomat/src/templates/solutions/checker_results_inline.html:15
+msgid "passed, failed"
+msgstr "bestanden, durchgefallen"
+
+#: Praktomat/src/templates/solutions/solution_detail.html:26
+msgid ""
+"All required tests have been passed. Nevertheless there is at least one "
+"warning"
+msgstr ""
+"Alle nötigen Tests wurden bestanden. Es gibt allerdings Warnungen"
+
+#: Praktomat/src/templates/solutions/solution_detail.html:27
+msgid "You should consider correcting it."
+msgstr "Sie sollten eine Korrektur vornehmen."
+
+#: Praktomat/src/templates/solutions/solution_detail.html:29
+msgid "All required tests have been passed."
+msgstr "Alle nötigen Tests wurden bestanden."
+
+#: Praktomat/src/templates/solutions/solution_detail.html:32
+msgid "Not all required tests have been passed."
+msgstr "Nicht alle nötigen Tests wurden bestanden."
+
+#: Praktomat/src/templates/solutions/solution_detail.html:33
+msgid "Please correct the errors below and try again!"
+msgstr "Bitte korrigieren Sie die angezeigten Fehler und versuchen Sie es nocheinmal!"
+
+#: Praktomat/src/templates/solutions/solution_detail.html:63
+#: Praktomat/src/templates/solutions/solution_detail.html:70
+msgid "Results"
+msgstr "Ergebnisse"
+
+#: Praktomat/src/templates/solutions/solution_list.html:77
+msgid "Time left:"
+msgstr "Restzeit:"
+
+#: Praktomat/src/templates/solutions/solution_list.html:82
+#: Praktomat/src/templates/solutions/solution_list.html:101
+#: Praktomat/src/templates/solutions/solution_list.html:122
+#: Praktomat/src/templates/solutions/solution_list.html:137
+#: Praktomat/src/templates/solutions/solution_list.html:148
+#: Praktomat/src/templates/solutions/solution_test_upload.html:51
+msgid "Upload solution"
+msgstr "Lösung hochladen"
+
+#: Praktomat/src/templates/solutions/solution_list.html:83
+#: Praktomat/src/templates/solutions/solution_list.html:102
+msgid "A student couldn't upload now because:"
+msgstr "Ein Student konnte nicht hochladen weil:"
+
+#: Praktomat/src/templates/solutions/solution_list.html:85
+#: Praktomat/src/templates/solutions/solution_list.html:104
+msgid "upload time has passed!"
+msgstr "Zeit zum Hochladen ist vorüber!"
+
+#: Praktomat/src/templates/solutions/solution_list.html:87
+msgid "the limit of allowed submissions has been reached."
+msgstr "Die Anzahl der erlaubeten Einreichungen wurde überschritten."
+
+#: Praktomat/src/templates/solutions/solution_list.html:94
+msgid "Upload solution denied"
+msgstr "Hochladen der Lösung untersagt"
+
+#: Praktomat/src/templates/solutions/solution_list.html:95
+msgid "You have reached the limit of allowed submissions for this task."
+msgstr "Sie haben die Anzahl der erlaubten Einreichungen für die Aufgabe überschritten."
+
+#: Praktomat/src/templates/solutions/solution_list.html:96
+#: Praktomat/src/templates/solutions/solution_list.html:119
+msgid "But you can resubmit a former upload out of Solution History."
+msgstr "Sie können aber eine früher hochgeladene Lösung aus dem Verlauf wieder einreichen."
+
+#: Praktomat/src/templates/solutions/solution_list.html:106
+msgid "the current wait-time is: "
+msgstr "Die aktuelle Wartedauer beträgt: "
+
+#: Praktomat/src/templates/solutions/solution_list.html:113
+msgid "Upload solution denied for now"
+msgstr "Hochladen der Lösung derzeit untersagt"
+
+#: Praktomat/src/templates/solutions/solution_list.html:115
+#: Praktomat/src/templates/solutions/solution_list.html:124
+#: Praktomat/src/templates/solutions/solution_list.html:139
+msgid "tries left"
+msgstr "Versuche offen"
+
+#: Praktomat/src/templates/solutions/solution_list.html:118
+msgid "Your current wait-time is:"
+msgstr "Ihre aktuelle Wartedauer beträgt: "
+
+#: Praktomat/src/templates/solutions/solution_list.html:129
+msgid "A student couldn't upload now because: upload time has passed!"
+msgstr "Ein Student konnte nicht hochladen, da die Zeit zum Hochladen abgelaufen ist!"
+
+#: Praktomat/src/templates/solutions/solution_list.html:149
+msgid "The deadline has passed. Therefore (re)submission is not possible."
+msgstr "Der Abgabetermin wurde erreicht. Daher ist ein (Wieder)Einreichen nicht möglich."
+
+#: Praktomat/src/templates/solutions/solution_list.html:161
+msgid "Final Solution"
+msgstr "Letzte (Finale) Lösung"
+
+#: Praktomat/src/templates/solutions/solution_list.html:167
+msgid "There is no final solution."
+msgstr "Keine finale Lösung vorhanden."
+
+#: Praktomat/src/templates/solutions/solution_list.html:170
+msgid "Solution History"
+msgstr "Lösungsverlauf"
+
+#: Praktomat/src/templates/solutions/solution_list.html:174
+msgid "No solutions have been uploaded."
+msgstr "Es wurden keine Lösungen hochgeladen."
+
+#: Praktomat/src/templates/tasks/task_detail.html:18
+#: Praktomat/src/attestation/models.py:21
+msgid "Attestations"
+msgstr "Bescheinigungen"
+
+#: Praktomat/src/templates/tasks/task_detail.html:21
+#: Praktomat/src/templates/tasks/task_list.html:75
+msgid "jPlag"
+msgstr "jPlag"
+
+#: Praktomat/src/templates/tasks/task_detail.html:25
+msgid "My Solutions"
+msgstr "Meine Lösungen"
+
+#: Praktomat/src/templates/tasks/task_list.html:60
+msgid "Expired tasks"
+msgstr "Abgelaufene Aufgaben"
+
+#: Praktomat/src/templates/tasks/task_list.html:60
+msgid "Upcoming tasks"
+msgstr "Anstehende Aufgaben"
+
+#: Praktomat/src/solutions/models.py:34
+msgid "Solution"
+msgstr "Lösung"
+
+#: Praktomat/src/templates/tasks/task_list.html:65
+#: Praktomat/src/solutions/models.py:35
+msgid "Solutions"
+msgstr "Lösungen"
+
+#: Praktomat/src/templates/tasks/task_list.html:81
+msgid "No tasks to be submitted at the moment."
+msgstr "Momentan sind keine Aufgaben vorhanden."
+
+#: env/lib/python2.7/site-packages/django/contrib/messages/apps.py:7
+msgid "Messages"
+msgstr "Mitteilungen"
+
+#: env/lib/python2.7/site-packages/django/contrib/sitemaps/apps.py:7
+msgid "Site Maps"
+msgstr "Sitemaps"
+
+#: env/lib/python2.7/site-packages/django/contrib/staticfiles/apps.py:7
+msgid "Static Files"
+msgstr "Statische Dateien"
+
+#: env/lib/python2.7/site-packages/django/contrib/syndication/apps.py:7
+msgid "Syndication"
+msgstr "Syndication"
+
+#: env/lib/python2.7/site-packages/django/contrib/webdesign/apps.py:7
+msgid "Web Design"
+msgstr "Webdesign"
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:20
+msgid "Enter a valid value."
+msgstr "Bitte einen gültigen Wert eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:87
+#: env/lib/python2.7/site-packages/django/forms/fields.py:712
+msgid "Enter a valid URL."
+msgstr "Bitte eine gültige Adresse eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:130
+msgid "Enter a valid integer."
+msgstr "Bitte eine gültige Ganzzahl eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:141
+msgid "Enter a valid email address."
+msgstr "Bitte gültige E-Mail-Adresse eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:215
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+"Bitte ein gültiges Kürzel, bestehend aus Buchstaben, Ziffern, Unter- und "
+"Bindestrichen, eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:220
+#: env/lib/python2.7/site-packages/django/core/validators.py:239
+msgid "Enter a valid IPv4 address."
+msgstr "Bitte eine gültige IPv4-Adresse eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:225
+#: env/lib/python2.7/site-packages/django/core/validators.py:240
+msgid "Enter a valid IPv6 address."
+msgstr "Eine gültige IPv6-Adresse eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:235
+#: env/lib/python2.7/site-packages/django/core/validators.py:238
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr "Eine gültige IPv4- oder IPv6-Adresse eingeben"
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:263
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1144
+msgid "Enter only digits separated by commas."
+msgstr "Bitte nur durch Komma getrennte Ziffern eingeben."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:272
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+"Bitte sicherstellen, dass der Wert %(limit_value)s ist. (Er ist "
+"%(show_value)s)"
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:298
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Dieser Wert muss kleiner oder gleich %(limit_value)s sein."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:305
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Dieser Wert muss größer oder gleich %(limit_value)s sein."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:314
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Bitte sicherstellen, dass der Wert aus mindestens %(limit_value)d Zeichen "
+"besteht. (Er besteht aus %(show_value)d Zeichen)."
+msgstr[1] ""
+"Bitte sicherstellen, dass der Wert aus mindestens %(limit_value)d Zeichen "
+"besteht. (Er besteht aus %(show_value)d Zeichen)."
+
+#: env/lib/python2.7/site-packages/django/core/validators.py:325
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+"Bitte sicherstellen, dass der Wert aus höchstens %(limit_value)d Zeichen "
+"besteht. (Er besteht aus %(show_value)d Zeichen)."
+msgstr[1] ""
+"Bitte sicherstellen, dass der Wert aus höchstens %(limit_value)d Zeichen "
+"besteht. (Er besteht aus %(show_value)d Zeichen)."
+
+#: env/lib/python2.7/site-packages/django/db/models/base.py:1130
+#: env/lib/python2.7/site-packages/django/forms/models.py:718
+#: env/lib/python2.7/site-packages/django_extensions/admin/__init__.py:128
+msgid "and"
+msgstr "und"
+
+#: env/lib/python2.7/site-packages/django/db/models/base.py:1132
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr "%(model_name)s mit diesem %(field_labels)s existiert bereits."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:107
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr "Wert %(value)r ist keine gültige Option."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:108
+msgid "This field cannot be null."
+msgstr "Dieses Feld darf nicht null sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:109
+msgid "This field cannot be blank."
+msgstr "Dieses Feld darf nicht leer sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:110
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr "%(model_name)s mit diesem %(field_label)s existiert bereits."
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:114
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+"%(field_label)s muss für %(date_field_label)s %(lookup_type)s eindeutig "
+"sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:132
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr "Feldtyp: %(field_type)s"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:922
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1832
+msgid "Integer"
+msgstr "Ganzzahl"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:926
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1830
+#, python-format
+msgid "'%(value)s' value must be an integer."
+msgstr "‚%(value)s‛ Wert muss eine Ganzzahl sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1001
+#, python-format
+msgid "'%(value)s' value must be either True or False."
+msgstr "‚%(value)s‛ Wert muss entweder True oder False sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1003
+msgid "Boolean (Either True or False)"
+msgstr "Boolescher Wert (True oder False)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1078
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/fields/__init__.py:24
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr "Zeichenkette (bis zu %(max_length)s Zeichen)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1139
+msgid "Comma-separated integers"
+msgstr "Kommaseparierte Liste von Ganzzahlen"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1188
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+"‚%(value)s‛ Wert hat ein ungültiges Datumsformat. Es muss YYYY-MM-DD "
+"entsprechen."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1190
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1340
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+"‚%(value)s‛ hat das korrekte Format (YYYY-MM-DD) aber ein ungültiges "
+"Datum."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1193
+msgid "Date (without time)"
+msgstr "Datum (ohne Uhrzeit)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1338
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+"‚%(value)s‛ Wert hat ein ungültiges Format. Es muss YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] entsprechen."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1342
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+"‚%(value)s‛ Wert hat das korrekte Format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) aber eine ungültige Zeit-/Datumsangabe."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1346
+msgid "Date (with time)"
+msgstr "Datum (mit Uhrzeit)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1498
+#, python-format
+msgid "'%(value)s' value must be a decimal number."
+msgstr "‚%(value)s‛ Wert muss eine Dezimalzahl sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1500
+msgid "Decimal number"
+msgstr "Dezimalzahl"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1651
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[."
+"uuuuuu] format."
+msgstr ""
+"'%(value)s' Wert hat ein ungültiges Format. Es muss der Form [DD] [HH:"
+"[MM:]]ss[.uuuuuu] entsprechen."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1654
+msgid "Duration"
+msgstr "Zeitspanne"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1705
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1729
+msgid "File path"
+msgstr "Dateipfad"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1796
+#, python-format
+msgid "'%(value)s' value must be a float."
+msgstr "‚%(value)s‛ Wert muss eine Fließkommazahl sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1798
+msgid "Floating point number"
+msgstr "Gleitkommazahl"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1899
+msgid "Big (8 byte) integer"
+msgstr "Große Ganzzahl (8 Byte)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1914
+msgid "IPv4 address"
+msgstr "IPv4-Adresse"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1950
+msgid "IP address"
+msgstr "IP-Adresse"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2029
+#, python-format
+msgid "'%(value)s' value must be either None, True or False."
+msgstr "‚%(value)s‛ Wert muss entweder None, True oder False sein."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2031
+msgid "Boolean (Either True, False or None)"
+msgstr "Boolescher Wert (True, False oder None)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2091
+msgid "Positive integer"
+msgstr "Positive Ganzzahl"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2103
+msgid "Positive small integer"
+msgstr "Positive kleine Ganzzahl"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2116
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr "Kürzel (bis zu %(max_length)s)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2145
+msgid "Small integer"
+msgstr "Kleine Ganzzahl"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2152
+msgid "Text"
+msgstr "Text"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2175
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+"‚%(value)s‛ Wert hat ein ungültiges Format. Es muss HH:MM[:ss[.uuuuuu]] "
+"entsprechen."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2177
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+"‚%(value)s‛ Wert hat das korrekte Format (HH:MM[:ss[.uuuuuu]]) aber ist "
+"eine ungültige Zeitangabe."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2180
+msgid "Time"
+msgstr "Zeit"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2308
+msgid "URL"
+msgstr "Adresse (URL)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2331
+msgid "Raw binary data"
+msgstr "Binärdaten"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2375
+#, python-format
+msgid "'%(value)s' is not a valid UUID."
+msgstr "Wert '%(value)s' ist keine gültige UUID."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/files.py:239
+msgid "File"
+msgstr "Datei"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/files.py:389
+msgid "Image"
+msgstr "Bild"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/related.py:1796
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr "Objekt vom Typ %(model)s mit %(field)s %(value)r existiert nicht."
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/related.py:1798
+msgid "Foreign Key (type determined by related field)"
+msgstr "Fremdschlüssel (Typ definiert durch verknüpftes Feld)"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/related.py:2028
+msgid "One-to-one relationship"
+msgstr "1:1-Beziehung"
+
+#: env/lib/python2.7/site-packages/django/db/models/fields/related.py:2118
+msgid "Many-to-many relationship"
+msgstr "n:m-Beziehung"
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:64
+msgid "This field is required."
+msgstr "Dieses Feld ist zwingend erforderlich."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:237
+msgid "Enter a whole number."
+msgstr "Bitte eine ganze Zahl eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:280
+#: env/lib/python2.7/site-packages/django/forms/fields.py:317
+msgid "Enter a number."
+msgstr "Bitte eine Zahl eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:319
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+"Bitte sicherstellen, dass der Wert höchstens %(max)s Ziffer enthält."
+msgstr[1] ""
+"Bitte sicherstellen, dass der Wert höchstens %(max)s Ziffern enthält."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:323
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+"Bitte sicherstellen, dass der Wert höchstens %(max)s Dezimalstelle "
+"enthält."
+msgstr[1] ""
+"Bitte sicherstellen, dass der Wert höchstens %(max)s Dezimalstellen "
+"enthält."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:327
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+"Bitte sicherstellen, dass der Wert höchstens %(max)s Ziffer vor dem Komma "
+"enthält."
+msgstr[1] ""
+"Bitte sicherstellen, dass der Wert höchstens %(max)s Ziffern vor dem "
+"Komma enthält."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:438
+#: env/lib/python2.7/site-packages/django/forms/fields.py:1193
+msgid "Enter a valid date."
+msgstr "Bitte ein gültiges Datum eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:462
+#: env/lib/python2.7/site-packages/django/forms/fields.py:1194
+msgid "Enter a valid time."
+msgstr "Bitte eine gültige Uhrzeit eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:484
+msgid "Enter a valid date/time."
+msgstr "Bitte ein gültiges Datum und Uhrzeit eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:525
+msgid "Enter a valid duration."
+msgstr "Bitte eine gültige Zeitspanne eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:591
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+"Es wurde keine Datei übertragen. Überprüfen Sie das Encoding des "
+"Formulars."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:592
+msgid "No file was submitted."
+msgstr "Es wurde keine Datei übertragen."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:593
+msgid "The submitted file is empty."
+msgstr "Die übertragene Datei ist leer."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:595
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+"Bitte sicherstellen, dass der Dateiname aus höchstens %(max)d Zeichen "
+"besteht. (Er besteht aus %(length)d Zeichen)."
+msgstr[1] ""
+"Bitte sicherstellen, dass der Dateiname aus höchstens %(max)d Zeichen "
+"besteht. (Er besteht aus %(length)d Zeichen)."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:598
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+"Bitte wählen Sie entweder eine Datei aus oder wählen Sie \"Löschen\", "
+"nicht beides."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:660
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+"Bitte ein gültiges Bild hochladen. Die hochgeladene Datei ist kein Bild "
+"oder ist defekt."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:827
+#: env/lib/python2.7/site-packages/django/forms/fields.py:921
+#: env/lib/python2.7/site-packages/django/forms/models.py:1234
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+"Bitte eine gültige Auswahl treffen. %(value)s ist keine gültige Auswahl."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:922
+#: env/lib/python2.7/site-packages/django/forms/fields.py:1037
+#: env/lib/python2.7/site-packages/django/forms/models.py:1233
+msgid "Enter a list of values."
+msgstr "Bitte eine Liste mit Werten eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:1038
+msgid "Enter a complete value."
+msgstr "Bitte einen vollständigen Wert eingeben."
+
+#: env/lib/python2.7/site-packages/django/forms/fields.py:1264
+msgid "Enter a valid UUID."
+msgstr "Bitte eine gültige UUID eingeben."
+
+#. Translators: This is the default suffix added to form field labels
+#: env/lib/python2.7/site-packages/django/forms/forms.py:129
+msgid ":"
+msgstr ":"
+
+#: env/lib/python2.7/site-packages/django/forms/forms.py:214
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr "(Verstecktes Feld %(name)s) %(error)s"
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: env/lib/python2.7/site-packages/django/forms/forms.py:659
+msgid ":?.!"
+msgstr "?.!"
+
+#: env/lib/python2.7/site-packages/django/forms/formsets.py:96
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr "ManagementForm-Daten fehlen oder wurden manipuliert."
+
+#: env/lib/python2.7/site-packages/django/forms/formsets.py:333
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] "Bitte höchstens %d Formular abschicken."
+msgstr[1] "Bitte höchstens %d Formulare abschicken."
+
+#: env/lib/python2.7/site-packages/django/forms/formsets.py:340
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] "Bitte %d oder mehr Formulare abschicken."
+msgstr[1] "Bitte %d oder mehr Formulare abschicken."
+
+#: env/lib/python2.7/site-packages/django/forms/formsets.py:368
+#: env/lib/python2.7/site-packages/django/forms/formsets.py:370
+msgid "Order"
+msgstr "Reihenfolge"
+
+#: env/lib/python2.7/site-packages/django/forms/formsets.py:372
+msgid "Delete"
+msgstr "Löschen"
+
+#: env/lib/python2.7/site-packages/django/forms/models.py:712
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr "itte die doppelten Daten für %(field)s korrigieren."
+
+#: env/lib/python2.7/site-packages/django/forms/models.py:716
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+"Bitte die doppelten Daten für %(field)s korrigieren, das eindeutig sein "
+"muss."
+
+#: env/lib/python2.7/site-packages/django/forms/models.py:722
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+"Bitte die doppelten Daten für %(field_name)s korrigieren, da es für "
+"%(lookup)s in %(date_field)s eindeutig sein muss."
+
+#: env/lib/python2.7/site-packages/django/forms/models.py:730
+msgid "Please correct the duplicate values below."
+msgstr "Bitte die unten aufgeführten doppelten Werte korrigieren."
+
+#: env/lib/python2.7/site-packages/django/forms/models.py:1053
+msgid "The inline foreign key did not match the parent instance primary key."
+msgstr ""
+"Der Inline-Fremdschlüssel passt nicht zum Primärschlüssel der "
+"übergeordneten Instanz."
+
+#: env/lib/python2.7/site-packages/django/forms/models.py:1119
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr "Bitte eine gültige Auswahl treffen. Dies ist keine gültige Auswahl."
+
+#: env/lib/python2.7/site-packages/django/forms/models.py:1236
+#, python-format
+msgid "\"%(pk)s\" is not a valid value for a primary key."
+msgstr "\"%(pk)s\" ist kein gültiger Wert für einen Primärschlüssel."
+
+#: env/lib/python2.7/site-packages/django/forms/utils.py:165
+#, python-format
+msgid ""
+"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+"%(datetime)s konnte mit der Zeitzone %(current_timezone)s nicht eindeutig "
+"interpretiert werden, da es doppeldeutig oder eventuell inkorrekt ist."
+
+#: env/lib/python2.7/site-packages/django/forms/widgets.py:345
+msgid "Currently"
+msgstr "Derzeit"
+
+#: env/lib/python2.7/site-packages/django/forms/widgets.py:346
+msgid "Change"
+msgstr "Ändern"
+
+#: env/lib/python2.7/site-packages/django/forms/widgets.py:347
+msgid "Clear"
+msgstr "Zurücksetzen"
+
+#: env/lib/python2.7/site-packages/django/forms/widgets.py:555
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: env/lib/python2.7/site-packages/django/forms/widgets.py:556
+msgid "Yes"
+msgstr "Ja"
+
+#: env/lib/python2.7/site-packages/django/forms/widgets.py:557
+msgid "No"
+msgstr "Nein"
+
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:865
+msgid "yes,no,maybe"
+msgstr "Ja,Nein,Vielleicht"
+
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:894
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:906
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] "%(size)d Byte"
+msgstr[1] "%(size)d Bytes"
+
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:908
+#, python-format
+msgid "%s KB"
+msgstr "%s KB"
+
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:910
+#, python-format
+msgid "%s MB"
+msgstr "%s MB"
+
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:912
+#, python-format
+msgid "%s GB"
+msgstr "%s GB"
+
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:914
+#, python-format
+msgid "%s TB"
+msgstr "%s TB"
+
+#: env/lib/python2.7/site-packages/django/template/defaultfilters.py:916
+#, python-format
+msgid "%s PB"
+msgstr "%s PB"
+
+#: env/lib/python2.7/site-packages/django/utils/dateformat.py:61
+msgid "p.m."
+msgstr "nachm."
+
+#: env/lib/python2.7/site-packages/django/utils/dateformat.py:62
+msgid "a.m."
+msgstr "vorm."
+
+#: env/lib/python2.7/site-packages/django/utils/dateformat.py:67
+msgid "PM"
+msgstr "nachm."
+
+#: env/lib/python2.7/site-packages/django/utils/dateformat.py:68
+msgid "AM"
+msgstr "vorm."
+
+#: env/lib/python2.7/site-packages/django/utils/dateformat.py:151
+msgid "midnight"
+msgstr "Mitternacht"
+
+#: env/lib/python2.7/site-packages/django/utils/dateformat.py:153
+msgid "noon"
+msgstr "Mittag"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr "Montag"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr "Freitag"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr "Samstag"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr "Mo"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Tue"
+msgstr "Di"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr "Mi"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr "Do"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr "Fr"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:11
+msgid "Sat"
+msgstr "Sa"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr "So"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "January"
+msgstr "Januar"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "February"
+msgstr "Februar"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "March"
+msgstr "März"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "April"
+msgstr "April"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "May"
+msgstr "Mai"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "June"
+msgstr "Juni"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "July"
+msgstr "Juli"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "August"
+msgstr "August"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "September"
+msgstr "September"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "October"
+msgstr "Oktober"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "November"
+msgstr "November"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:20
+msgid "December"
+msgstr "Dezember"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "jan"
+msgstr "Jan"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "feb"
+msgstr "Feb"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "mar"
+msgstr "Mär"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "apr"
+msgstr "Apr"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "may"
+msgstr "Mai"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "jun"
+msgstr "Jun"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "jul"
+msgstr "Jul"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "aug"
+msgstr "Aug"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "sep"
+msgstr "Sep"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "oct"
+msgstr "Okt"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "nov"
+msgstr "Nov"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "dec"
+msgstr "Dez"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr "Jan."
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr "Feb."
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:33
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "März"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "April"
+msgstr "April"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:35
+msgctxt "abbrev. month"
+msgid "May"
+msgstr "Mai"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:36
+msgctxt "abbrev. month"
+msgid "June"
+msgstr "Juni"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:37
+msgctxt "abbrev. month"
+msgid "July"
+msgstr "Juli"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:38
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr "Aug."
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:39
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr "Sept."
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:40
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr "Okt."
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:41
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "Nov."
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:42
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr "Dez."
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "January"
+msgstr "Januar"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "February"
+msgstr "Februar"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:47
+msgctxt "alt. month"
+msgid "March"
+msgstr "März"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "April"
+msgstr "April"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:49
+msgctxt "alt. month"
+msgid "May"
+msgstr "Mai"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:50
+msgctxt "alt. month"
+msgid "June"
+msgstr "Juni"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:51
+msgctxt "alt. month"
+msgid "July"
+msgstr "Juli"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:52
+msgctxt "alt. month"
+msgid "August"
+msgstr "August"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:53
+msgctxt "alt. month"
+msgid "September"
+msgstr "September"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:54
+msgctxt "alt. month"
+msgid "October"
+msgstr "Oktober"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:55
+msgctxt "alt. month"
+msgid "November"
+msgstr "November"
+
+#: env/lib/python2.7/site-packages/django/utils/dates.py:56
+msgctxt "alt. month"
+msgid "December"
+msgstr "Dezember"
+
+#: env/lib/python2.7/site-packages/django/utils/ipv6.py:10
+msgid "This is not a valid IPv6 address."
+msgstr "Dies ist keine gültige IPv6-Adresse."
+
+#: env/lib/python2.7/site-packages/django/utils/text.py:79
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s..."
+msgstr "%(truncated_text)s..."
+
+#: env/lib/python2.7/site-packages/django/utils/text.py:248
+msgid "or"
+msgstr "oder"
+
+#. Translators: This string is used as a separator between list elements
+#: env/lib/python2.7/site-packages/django/utils/text.py:267
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:58
+msgid ", "
+msgstr ", "
+
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] "%d Jahr"
+msgstr[1] "%d Jahre"
+
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] "%d Monat"
+msgstr[1] "%d Monate"
+
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] "%d Woche"
+msgstr[1] "%d Wochen"
+
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d Tag"
+msgstr[1] "%d Tage"
+
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d Stunde"
+msgstr[1] "%d Stunden"
+
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:15
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d Minute"
+msgstr[1] "%d Minuten"
+
+#: env/lib/python2.7/site-packages/django/utils/timesince.py:47
+msgid "0 minutes"
+msgstr "0 Minuten"
+
+#: env/lib/python2.7/site-packages/django/views/csrf.py:107
+msgid "Forbidden"
+msgstr "Verboten"
+
+#: env/lib/python2.7/site-packages/django/views/csrf.py:108
+msgid "CSRF verification failed. Request aborted."
+msgstr "CSRF-Verifizierung fehlgeschlagen. Anfrage abgebrochen."
+
+#: env/lib/python2.7/site-packages/django/views/csrf.py:112
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer "
+"header' to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+"Sie sehen diese Fehlermeldung da diese HTTPS-Seite einen „Referer“-Header "
+"von Ihrem Webbrowser erwartet, aber keinen erhalten hat. Dieser Header "
+"ist aus Sicherheitsgründen notwendig, um sicherzustellen, dass Ihr "
+"Webbrowser nicht von Dritten missbraucht wird."
+
+#: env/lib/python2.7/site-packages/django/views/csrf.py:117
+msgid ""
+"If you have configured your browser to disable 'Referer' headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for 'same-"
+"origin' requests."
+msgstr ""
+"Falls Sie Ihren Webbrowser so konfiguriert haben, dass „Referer“-Header "
+"nicht gesendet werden, müssen Sie diese Funktion mindestens für diese "
+"Seite, für sichere HTTPS-Verbindungen oder für „Same-Origin“-Verbindungen "
+"reaktivieren."
+
+#: env/lib/python2.7/site-packages/django/views/csrf.py:122
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+"Sie sehen Diese Nachricht, da diese Seite einen CSRF-Cookie beim "
+"Verarbeiten von Formulardaten benötigt. Dieses Cookie ist aus "
+"Sicherheitsgründen notwendig, um sicherzustellen, dass Ihr Webbrowser "
+"nicht von Dritten missbraucht wird."
+
+#: env/lib/python2.7/site-packages/django/views/csrf.py:127
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for 'same-origin' requests."
+msgstr ""
+"Falls Sie Cookies in Ihren Webbrowser deaktiviert haben, müssen Sie sie "
+"midestens für diese Seite oder für „Same-Origin“-Verbindungen "
+"reaktivieren."
+
+#: env/lib/python2.7/site-packages/django/views/csrf.py:132
+msgid "More information is available with DEBUG=True."
+msgstr "Mehr Information ist verfügbar mit DEBUG=True."
+
+#: env/lib/python2.7/site-packages/django/views/debug.py:583
+msgid "Welcome to Django"
+msgstr "Willkommen zu Django"
+
+#: env/lib/python2.7/site-packages/django/views/debug.py:584
+msgid "It worked!"
+msgstr "Es hat geklappt!"
+
+#: env/lib/python2.7/site-packages/django/views/debug.py:585
+msgid "Congratulations on your first Django-powered page."
+msgstr "Herzlichen Glückwunsch zur ersten Django-basierten Seite."
+
+#: env/lib/python2.7/site-packages/django/views/debug.py:586
+msgid ""
+"Of course, you haven't actually done any work yet. Next, start your first "
+"app by running <code>python manage.py startapp [app_label]</code>."
+msgstr ""
+"Natürlich ist hier noch nichts weiter zu sehen. Bitte als Nächstes eine "
+"neue Anwendung durch Ausführen von <code>python manage.py startapp "
+"[app_label]</code> anlegen."
+
+#: env/lib/python2.7/site-packages/django/views/debug.py:588
+msgid ""
+"You're seeing this message because you have <code>DEBUG = True</code> in "
+"your Django settings file and you haven't configured any URLs. Get to work!"
+msgstr ""
+"Diese Mitteiling ist sichtbar weil in der settings.py-Datei <code>DEBUG = "
+"True</code> steht und die URLs noch nicht konfiguriert sind."
+
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:48
+msgid "No year specified"
+msgstr "Kein Jahr angegeben"
+
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:104
+msgid "No month specified"
+msgstr "Kein Monat angegeben"
+
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:163
+msgid "No day specified"
+msgstr "Kein Tag angegeben"
+
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:219
+msgid "No week specified"
+msgstr "Keine Woche angegeben"
+
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:378
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:406
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr "Keine %(verbose_name_plural)s verfügbar"
+
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:660
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+"In der Zukunft liegende %(verbose_name_plural)s sind nicht verfügbar, da "
+"%(class_name)s.allow_future auf False gesetzt ist."
+
+#: env/lib/python2.7/site-packages/django/views/generic/dates.py:694
+#, python-format
+msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
+msgstr "Ungültiges Datum '%(datestr)s' für das Format '%(format)s'"
+
+#: env/lib/python2.7/site-packages/django/views/generic/detail.py:55
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr "Konnte keine %(verbose_name)s mit diesen Parametern finden."
+
+#: env/lib/python2.7/site-packages/django/views/generic/list.py:76
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+"Weder ist dies die letzte Seite ('last') noch konnte sie in einen "
+"ganzzahligen Wert umgewandelt werden."
+
+#: env/lib/python2.7/site-packages/django/views/generic/list.py:81
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr "Ungültige Seite (%(page_number)s): %(message)s"
+
+#: env/lib/python2.7/site-packages/django/views/generic/list.py:172
+#, python-format
+msgid "Empty list and '%(class_name)s.allow_empty' is False."
+msgstr "Leere Liste und '%(class_name)s.allow_empty' ist False."
+
+#: env/lib/python2.7/site-packages/django/views/static.py:58
+msgid "Directory indexes are not allowed here."
+msgstr "Dateilisten sind untersagt."
+
+#: env/lib/python2.7/site-packages/django/views/static.py:60
+#, python-format
+msgid "\"%(path)s\" does not exist"
+msgstr "\"%(path)s\" existiert nicht"
+
+#: env/lib/python2.7/site-packages/django/views/static.py:100
+#, python-format
+msgid "Index of %(directory)s"
+msgstr "Verzeichnis %(directory)s"
+
+#: env/lib/python2.7/site-packages/django_extensions/admin/__init__.py:130
+#, python-format
+msgid ""
+"Use the left field to do %(model_name)s lookups in the fields %(field_list)s."
+msgstr ""
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:22
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:17
+msgid "created"
+msgstr "erstellt"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:23
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:18
+msgid "modified"
+msgstr "geändert"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:36
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:29
+msgid "title"
+msgstr "Titel"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:37
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:30
+msgid "slug"
+msgstr "Kürzel"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:38
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:31
+msgid "description"
+msgstr "Beschreibung"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:63
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:55
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:64
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:56
+msgid "Active"
+msgstr "Aktiv"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:66
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:58
+msgid "status"
+msgstr "Status"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:67
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:59
+msgid "keep empty for an immediate activation"
+msgstr "Bitte freilassen für schnelle Aktivierung"
+
+#: env/lib/python2.7/site-packages/django_extensions/db/models.py:68
+#: env/lib/python2.7/site-packages/django_extensions/mongodb/models.py:60
+msgid "keep empty for indefinite activation"
+msgstr "Bitte freilassen für unbegrenzte Aktivierung"
+
+#: env/lib/python2.7/site-packages/django_extensions/templates/django_extensions/widgets/foreignkey_searchinput.html:4
+msgid "Lookup"
+msgstr "Suchen"
+
+#: env/lib/python2.7/site-packages/tinymce/views.py:57
+msgid "Error running spellchecker"
+msgstr "Spellchecker kann nicht ausgeführt werden"
