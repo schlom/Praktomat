@@ -89,5 +89,5 @@ class MyBaseInlineFormSet(BaseInlineFormSet):
         if not reduce(lambda x,y: x + y.changed_data, self.forms, []):
 			raise forms.ValidationError(_('You must at least choose one file.'))
 
-SolutionFormSet = inlineformset_factory(Solution, SolutionFile, form=SolutionFileForm, formset=MyBaseInlineFormSet, can_delete=False, extra=3)
+SolutionFormSet = inlineformset_factory(Solution, SolutionFile, form=SolutionFileForm, formset=MyBaseInlineFormSet, can_delete=False, extra=6)
 ModelSolutionFormSet = inlineformset_factory(Solution, SolutionFile, form=SolutionFileForm, formset=MyBaseInlineFormSet, can_delete=False, extra=1)

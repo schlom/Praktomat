@@ -5,9 +5,9 @@ from django.forms.models import ModelForm, inlineformset_factory, BaseInlineForm
 from django.forms.formsets import formset_factory
 from django import forms
 
-from attestation.models import Attestation, AnnotatedSolutionFile, RatingResult, Script,SolutionFile
+from attestation.models import Attestation, AnnotatedSolutionFile, RatingResult, SolutionFile
 from configuration.models import Settings
-											
+
 
 class AttestationForm(ModelForm):
 	class Meta:
@@ -67,11 +67,6 @@ class RatingResultForm(ModelForm):
 
 RatingResultFormSet = inlineformset_factory(Attestation, RatingResult, form=RatingResultForm, formset=BaseInlineFormSet, can_delete=False, extra=0)
 
-class ScriptForm(ModelForm):
-	class Meta:
-		model = Script
-                fields = '__all__'
-
 class PublishFinalGradeForm(ModelForm):
 	class Meta:
 		model = Settings
@@ -83,3 +78,7 @@ class GenerateRatingScaleForm(forms.Form):
 	end = forms.FloatField(initial=15, help_text="The last RatingScaleItem to generate.")
 	step = forms.FloatField(initial=1, help_text="The step size between the RatingScaleItems.")
 
+class FinalGradeOptionForm(ModelForm):
+	class Meta:
+		model = Settings
+		fields = ('final_grades_arithmetic_option', 'final_grades_plagiarism_option')

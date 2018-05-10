@@ -1,3 +1,5 @@
+# -*- encoding: utf8
+
 import os
 from os.path import dirname, join
 from django.conf import settings

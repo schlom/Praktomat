@@ -26,7 +26,7 @@ class LineWidthChecker(Checker):
 	@staticmethod
 	def description():
 		""" Returns a description for this Checker. """
-		s = u"Diese Prüfung ist bestanden, wenn keine Zeile des Programmtext breiter als die angegebene Anzahl Zeichen ist."
+		s = u"Diese Pruefung ist bestanden, wenn keine Zeile des Programmtext breiter als die angegebene Anzahl Zeichen ist."
 		return s
 	
 	def setup_line(self, line, env):

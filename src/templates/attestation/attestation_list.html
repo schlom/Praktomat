@@ -104,6 +104,22 @@
                                                       <td>{{entry.total}}</td>
                                                 </tr>
 					{% endfor %}
+					{% if no_tutorial_stats.unattested %}
+						<tr>
+							<td></td><td></td><td></td><td></td><td></td>
+						</tr>
+						<tr class="{% if entry.unattested != 0 %}          some_unattested
+						           {% else %} {% if entry.nonfinal != 0 %} some_nonfinal
+							              {% else %}                     all_final
+								      {% endif %}
+							   {% endif %}">
+                                                      <td>None</td>
+                                                      <td>{{no_tutorial_stats.unattested}}</td>
+                                                      <td>{{no_tutorial_stats.nonfinal}}</td>
+                                                      <td>{{no_tutorial_stats.final}}</td>
+                                                      <td>{{no_tutorial_stats.total}}</td>
+						</tr>
+					{% endif %}
 					</table>
 				</div>
 

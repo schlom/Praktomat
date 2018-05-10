@@ -21,18 +21,10 @@ from utilities.safeexec import execute_arglist
 
 
 class Task(models.Model):
-	class Meta:
-		ordering = ['title']
-		verbose_name = _('Task')
-		verbose_name_plural = _('Tasks')
 	title = models.CharField(max_length=100, help_text = _("The name of the Task"))
 	description = models.TextField(help_text = _("Description of the assignment."))
 	publication_date = models.DateTimeField(help_text = _("The time on which the user will see the task."))
 	submission_date = models.DateTimeField(help_text = _("The time up until the user has time to complete the task. This time will be extended by one hour for those who just missed the deadline."))
-	
-	submission_free_uploads = models.IntegerField(default=1, help_text =_("Number of submissions a user can make before waitdelta got active"))
-	submission_waitdelta = models.IntegerField(default=0,help_text=_("Timedelta in minutes. The user must wait before submitting the next solution of same task: Timedelta multiplied with number of current uploads"))
-	submission_maxpossible = models.IntegerField(default=-1,help_text=_("Number of uploads a user can submit for the same task. Value -1 means unlimited")) 
 	
 	supported_file_types = models.CharField(max_length=1000, default ="^(text/.*|image/.*|application/pdf)$", help_text = _("Regular Expression describing the mime types of solution files that the user is allowed to upload."))
 	max_file_size = models.IntegerField(default=1000, help_text = _("The maximum size of an uploaded solution file in kilobyte."))
@@ -40,8 +32,12 @@ class Task(models.Model):
 			null=True, related_name='model_solution_task')
 	all_checker_finished = models.BooleanField(default=False, editable=False, help_text = _("Indicates whether the checker which don't run immediately on submission have been executed."))
 	final_grade_rating_scale = models.ForeignKey('attestation.RatingScale', null=True, help_text = _("The scale used to mark the whole solution."))
+	warning_threshold = models.DecimalField(max_digits=8, decimal_places=2, default=0, help_text = _("If the student has less points in his tasks than the sum of their warning thresholds, display a warning."))
         only_trainers_publish = models.BooleanField(default=False, help_text = _("Indicates that only trainers may publish attestations. Otherwise, tutors may publish final attestations within their tutorials."))
         jplag_up_to_date = models.BooleanField(default=False, help_text = _("No new solution uploads since the last jPlag run"))
+
+	class Meta:
+		ordering = ['submission_date', 'title']
 
 	def __unicode__(self):
 		return self.title
@@ -249,8 +245,30 @@ class Task(models.Model):
 def get_mediafile_storage_path(instance, filename):
     return 'TaskMediaFiles/Task_%s/%s' % (instance.task.pk, filename)
 
+def get_htmlinjectorfile_storage_path(instance, filename):
+    return 'TaskHtmlInjectorFiles/Task_%s/%s' % (instance.task.pk, filename)
 
 class MediaFile(models.Model):
 
 	task = models.ForeignKey(Task)
 	media_file = DeletingFileField(upload_to=get_mediafile_storage_path, max_length=500)
+
+class HtmlInjector(models.Model):
+	task = models.ForeignKey(Task)
+	inject_in_solution_view      = models.BooleanField(
+        	default=False,
+		help_text = _("Indicates whether HTML code shall be injected in public solution views, e.g.: in https://praktomat.cs.kit.edu/2016_WS_Abschluss/solutions/5710/")
+	) 
+	inject_in_solution_full_view = models.BooleanField(
+		default=False,
+		help_text = _("Indicates whether HTML code shall be injected in private solution views, e.g.: in https://praktomat.cs.kit.edu/2016_WS_Abschluss/solutions/5710/full")
+	) 
+	inject_in_attestation_edit = models.BooleanField(
+		default=True,
+		help_text = _("Indicates whether HTML code shall be injected in attestation edits, e.g.: in https://praktomat.cs.kit.edu/2016_WS_Abschluss/attestation/134/edit")
+	) 
+	inject_in_attestation_view = models.BooleanField(
+		default=False,
+		help_text = _("Indicates whether HTML code shall be injected in attestation views, e.g.: in https://praktomat.cs.kit.edu/2016_WS_Abschluss/attestation/134")
+	)
+	html_file = DeletingFileField(upload_to=get_htmlinjectorfile_storage_path, max_length=500)

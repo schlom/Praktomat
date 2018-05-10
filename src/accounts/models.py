@@ -32,8 +32,6 @@ class User(BasicUser):
 	objects = UserManager()
 
 	class Meta:
-		verbose_name = _('User')
-		verbose_name_plural = _('Users')
 		ordering = ['first_name', 'last_name']
 
         def __init__(self, *args, **kwargs):
@@ -116,11 +114,7 @@ class User(BasicUser):
 	activate_user = staticmethod(activate_user)
 	
 	def is_shibboleth_user(self):
-		return not self.has_usable_password() and not self.is_ldap_user()
-
-
-	def is_ldap_user(self):
-		return self.password == 'LDAP_AUTH'
+		return not self.has_usable_password()
 
         # Cache group membership for users
         def cached_groups(self):
@@ -137,7 +131,9 @@ class User(BasicUser):
         @property
         def is_trainer(self):
             return 'Trainer' in self.cached_groups()
-
+        @property
+        def is_coordinator(self):
+            return 'Coordinator' in self.cached_groups()
 
 	@classmethod
 	def export_user(cls, queryset):
@@ -202,11 +198,7 @@ class Tutorial(models.Model):
 
 	def tutors_flat(self):
 		return reduce(lambda x, y: x + ', ' + y.get_full_name(), self.tutors.all(),'')[2:]
-	tutors_flat.short_description = _("Tutors")
+	tutors_flat.short_description = _('Tutors')
 
 	def __unicode__(self):
 		return("%s: %s" % (self.name, self.tutors_flat()))
-
-	class Meta:
-		verbose_name = _('Tutorial')
-		verbose_name_plural = _('Tutorials')

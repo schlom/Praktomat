@@ -67,8 +67,8 @@ DATABASES = {
 #ALLOWED_HOSTS = [ 'praktomat.cs.kit.edu', ]
 ALLOWED_HOSTS = ['*']
 # Enabled DEBUG is default
-#DEBUG = False
-DEBUG = True
+DEBUG = False
+#DEBUG = True
 
 # SECRET_KEY gets generated via defaults.py
 # Private key used to sign uploaded solution files in submission confirmation email

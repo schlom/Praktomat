@@ -5,7 +5,7 @@ import re
 
 from django.conf import settings
 from django.db import models, transaction
-from django.template import Context, loader
+from django.template import loader
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import Group
 from django import forms
@@ -15,7 +15,7 @@ from django.utils.http import int_to_base36
 from django.utils.safestring import mark_safe
 from configuration import get_settings
 
-from accounts.models import User, Tutorial
+from accounts.models import User
 
 class MyRegistrationForm(UserBaseCreationForm):
 	
@@ -57,17 +57,6 @@ class MyRegistrationForm(UserBaseCreationForm):
 				raise forms.ValidationError(mark_safe("A user with this number is already registered. Please Contact an Trainer: %s" % trainers ))
 		return data
 
-	def clean_username(self):
-		# FIXME - see KITPraktomat Bugreport nr 221
-		# https://github.com/KITPraktomatTeam/Praktomat/issues/221
-		# username = super(MyRegistrationForm,self).clean_username()
-		#try:
-		#	User.objects.get(username__iexact=username)
-		#except User.DoesNotExist:
-		#	return username
-		#raise forms.ValidationError(_("A user with that username already exists."))
-		username = self.cleaned_data["username"]
-		return username
 
 	@transaction.atomic
 	def save(self):
@@ -99,13 +88,13 @@ class MyRegistrationForm(UserBaseCreationForm):
 
 		if get_settings().account_manual_validation:
 			t = loader.get_template('registration/registration_email_manual_to_staff.html')
- 			send_mail(_("Account activation on %s for %s (%s) ") % (settings.SITE_NAME,user.username,unicode(user)), t.render(Context(c)), None, [staff.email for staff in User.objects.all().filter(is_staff=True)])
+ 			send_mail(_("Account activation on %s for %s (%s) ") % (settings.SITE_NAME,user.username,unicode(user)), t.render(c), None, [staff.email for staff in User.objects.all().filter(is_staff=True)])
 
 			t = loader.get_template('registration/registration_email_manual_to_user.html')
- 			send_mail(_("Account activation on %s") % settings.SITE_NAME, t.render(Context(c)), None, [user.email])
+ 			send_mail(_("Account activation on %s") % settings.SITE_NAME, t.render(c), None, [user.email])
 		else:
 			t = loader.get_template('registration/registration_email.html')
-			send_mail(_("Account activation on %s") % settings.SITE_NAME, t.render(Context(c)), None, [user.email])
+			send_mail(_("Account activation on %s") % settings.SITE_NAME, t.render(c), None, [user.email])
 		
 		return user
 
@@ -125,18 +114,6 @@ class AdminUserCreationForm(UserBaseCreationForm):
 	class Meta:
 		model = User
                 fields = "__all__"
-
-	def clean_username(self):
-		# FIXME - see KITPraktomat Bugreport nr 221
-		# https://github.com/KITPraktomatTeam/Praktomat/issues/221
-		#username = super(AdminUserCreationForm,self).clean_username()
-		#try:
-		#	User.objects.get(username__iexact=username)
-		#except User.DoesNotExist:
-		#	return username
-		#raise forms.ValidationError(_("A user with that username already exists."))
-		username = self.cleaned_data["username"]
-		return username
 
 class AdminUserChangeForm(UserBaseChangeForm):
 	class Meta:
@@ -158,7 +135,7 @@ class AdminUserChangeForm(UserBaseChangeForm):
 
 
 reactivation_message_text = """ {% autoescape off %}
-You're receiving this e-mail because you have been registerd at {{ site_name }}.
+You're receiving this e-mail because you have been registered at {{ site_name }}.
 
 Please go to the following page to activate your account within {{ expiration_days }} days.
 
@@ -173,14 +150,10 @@ The {{ site_name }} team
 {% endautoescape %} """
 
 class ImportForm(forms.Form):
-	file = forms.FileField(required=True, help_text = "The file exported from the list view. Allready existing users will be ignorred.")
+	file = forms.FileField(required=True, help_text = "The file exported from the list view. Already existing users will be ignored.")
 	require_reactivation = forms.BooleanField(initial=True, required=False, help_text = "Deactivate all imported users")
 	send_reactivation_email = forms.BooleanField(initial=False, required=False, help_text = "Send activation email to imported users (if deactivated during import)")
 	meassagetext = forms.CharField(required=False, widget=forms.Textarea, initial = reactivation_message_text, help_text = "Message to be embedded into activation mail if reactivation is required.")
-
-class ImportLDAPForm(forms.Form):
-	tutorial = forms.ModelChoiceField(queryset=Tutorial.objects.all(), required=False)
-	uids = forms.CharField(label='UIDs', required=False, widget=forms.Textarea, initial = '', help_text = "List of UIDs to be imported, delimited by whitespace. Already existing accounts will be ignored.")
 
 class ImportTutorialAssignmentForm(forms.Form):
 	csv_file = forms.FileField(required=True, help_text = "The csv file containing the tutorial name and the students mat number.")
@@ -192,6 +165,6 @@ class ImportTutorialAssignmentForm(forms.Form):
 	
 
 class ImportMatriculationListForm(forms.Form):
-    mat_number_file = forms.FileField(required=True, help_text = "A text file consisting of one matriculatoin number per line.")
+    mat_number_file = forms.FileField(required=True, help_text = "A text file consisting of one matriculation number per line.")
     remove_others = forms.BooleanField(required=False, initial = True, help_text = "Also remove all users from the group if they are not listed here.")
     create_users = forms.BooleanField(required=False, initial = False, help_text = "If a matriculation number is not known yet, create a stub user object")

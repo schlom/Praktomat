@@ -117,13 +117,15 @@ def load_defaults(settings):
         'accounts.middleware.LogoutInactiveUserMiddleware',
     )
 
+    # needed since Django 1.11 in order to show the 'Deactivated' page
+    d.AUTH_BACKEND = 'django.contrib.auth.backends.AllowAllUsersModelBackend'
+
+    d.AUTHENTICATION_BACKENDS = (d.AUTH_BACKEND,)
+
     d.DEFAULT_FILE_STORAGE = 'utilities.storage.UploadStorage'
 
     # URL and file paths
-
-    d.TEMPLATE_DIRS = (
-        join(PRAKTOMAT_ROOT, "src", "templates"),
-    )
+    # Template file path is set in template section
 
     d.STATICFILES_DIRS = (
         join(PRAKTOMAT_ROOT, "media"),
@@ -167,37 +169,40 @@ def load_defaults(settings):
         if os.path.exists(secret_keyfile):
             d.SECRET_KEY = open(secret_keyfile).read()
             if not d.SECRET_KEY:
-                raise RuntimeError("File %s empty!" % secret_keyfile)	      
+                raise RuntimeError("File %s empty!" % secret_keyfile)
         else:
             import uuid            
             d.SECRET_KEY = uuid.uuid4().hex
-            os.fdopen(os.open(secret_keyfile,os.O_WRONLY | os.O_CREAT,0600),'w').write(d.SECRET_KEY)
+            os.fdopen(os.open(secret_keyfile,os.O_WRONLY | os.O_CREAT,0600),'w').write(SECRET_KEY)
 
 
     # Templates
 
-    # A boolean that turns on/off template debug mode. If this is True, the fancy 
-    # error page will display a detailed report for any TemplateSyntaxError. 
-    # Note that Django only displays fancy error pages if DEBUG is True.
-    d.TEMPLATE_DEBUG = True
-
-    # List of callables that know how to import templates from various sources.
-    d.TEMPLATE_LOADERS = (
-        'django.template.loaders.filesystem.Loader',
-        'django.template.loaders.app_directories.Loader',
-    )
-
-    d.TEMPLATE_CONTEXT_PROCESSORS = (
-        'context_processors.settings.from_settings',
-        'django.contrib.auth.context_processors.auth',
-        'django.core.context_processors.debug',
-        'django.core.context_processors.i18n',
-        'django.core.context_processors.media',
-        'django.core.context_processors.request',
-        'django.core.context_processors.static',
-        'django.contrib.messages.context_processors.messages',
-    )
-
+    d.TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [
+                join(PRAKTOMAT_ROOT, "src", "templates"),
+            ],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'context_processors.settings.from_settings',
+                    'django.contrib.auth.context_processors.auth',
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.i18n',
+                    'django.template.context_processors.media',
+                    'django.template.context_processors.request',
+                    'django.template.context_processors.static',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+                # A boolean that turns on/off template debug mode. If this is True, the fancy
+                # error page will display a detailed report for any TemplateSyntaxError.
+                # Note that Django only displays fancy error pages if DEBUG is True.
+                'debug': True
+            },
+        },
+    ]
 
     # Database
 
@@ -242,6 +247,7 @@ def load_defaults(settings):
     }
     d.TINYMCE_SPELLCHECKER = False
     d.TINYMCE_COMPRESSOR = False
+    d.TINYMCE_INCLUDE_JQUERY = False
 
     #############################################################################
     # Praktomat-specific settings                                               #
@@ -328,20 +334,6 @@ def load_defaults(settings):
     # Set this to False to disable "Got Problems?"-link in task list
     d.SHOW_CONTACT_LINK = True
 
-    #TODO: Code refactoring: make it more flexible, to change between LDAP or Shibboleth support!
-
-    # LDAP support
-    # You probably want to disable REGISTRATION_POSSIBLE if you enable LDAP
-    # LDAP config put it in local or devel settings with individual correct values!
-
-    d.LDAP_ENABLED = False
-    d.AUTHENTICATION_BACKENDS = (
-        'accounts.ldap_auth.LDAPBackend',
-        'django.contrib.auth.backends.ModelBackend',
-    )
-    d.LDAP_URI="ldap://ldap.DOMANENAME.TOPLEVEL"
-    d.LDAP_BASE="dc=DOMANENAME,dc=TOPLEVEL"
-
     # Length of timeout applied whenever an external check that runs a students
     # submission is executed,
     # for example: JUnitChecker, DejaGnuChecker
@@ -372,7 +364,7 @@ def load_defaults(settings):
     d.TEST_RUNNER = 'utilities.TestSuite.TestSuiteRunner'
 
     # This is actually a django setting, but depends on a praktomat setting:
-    if d.SHIB_ENABLED:
+    if SHIB_ENABLED:
         d.LOGIN_URL = 'shib_hello'
     else:
         d.LOGIN_URL = 'login'

@@ -3,22 +3,21 @@ import tempfile
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 from django.http import HttpResponseRedirect, HttpResponse
-from django.template.context import RequestContext
 from django.core.urlresolvers import reverse
 from django.views.decorators.cache import cache_control
-from django.template import Context, loader
+from django.template import loader
 from django.conf import settings
 from django.core.mail import send_mail
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.sites.requests import RequestSite
 
 
-from datetime import datetime, timedelta
+from datetime import datetime
 
-from tasks.models import Task
+from tasks.models import Task, HtmlInjector
 from attestation.models import Attestation
 from solutions.models import Solution, SolutionFile, get_solutions_zip
 from solutions.forms import SolutionFormSet
@@ -43,15 +42,6 @@ def solution_list(request, task_id, user_id=None):
         if task.publication_date >= datetime.now() and not request.user.is_trainer:
 		raise Http404
 	
-	uploads_left = task.submission_maxpossible - solutions.count()
-	minutes_to_wait_for_next_upload = task.submission_waitdelta * ( solutions.count() - task.submission_free_uploads )
-	
-	upload_next_possible_time = datetime.now()
-	if solutions.count() > 0 :
-		upload_next_possible_time = solutions[0].creation_date + timedelta(minutes=minutes_to_wait_for_next_upload)
-	
-	dnow = datetime.now()	
-	
 	if request.method == "POST":
                 if task.expired() and not request.user.is_trainer:
                         return access_denied(request)
@@ -61,7 +51,7 @@ def solution_list(request, task_id, user_id=None):
 		if formset.is_valid():
 			solution.save()
 			formset.save()
-                        run_all_checker = bool(User.objects.filter(id=user_id, tutorial__tutors__pk=request.user.id) and task.expired() or request.user.is_trainer and task.expired() )
+                        run_all_checker = bool(User.objects.filter(id=user_id, tutorial__tutors__pk=request.user.id) or request.user.is_trainer)
 			solution.check_solution(run_all_checker)
 			
 			if solution.accepted:  
@@ -74,7 +64,7 @@ def solution_list(request, task_id, user_id=None):
 					'solution': solution,
 				}
 				if solution.author.email:
-					send_mail(_("%s submission confirmation") % settings.SITE_NAME, t.render(Context(c)), None, [solution.author.email])
+					send_mail(_("%s submission confirmation") % settings.SITE_NAME, t.render(c), None, [solution.author.email])
 		
 			if solution.accepted or get_settings().accept_all_solutions:
 				solution.final = True
@@ -86,10 +76,10 @@ def solution_list(request, task_id, user_id=None):
 	
 	attestations = Attestation.objects.filter(solution__task=task, author__tutored_tutorials=request.user.tutorial)
 	attestationsPublished = attestations[0].published if attestations else False
-	
-	return render_to_response("solutions/solution_list.html",
-                {"formset": formset, "task":task, "solutions": solutions, "final_solution":final_solution, "uploads_left":uploads_left, "upload_next_possible_time":upload_next_possible_time, "dnow":dnow, "attestationsPublished":attestationsPublished, "author":author, "invisible_attestor":get_settings().invisible_attestor},
-		context_instance=RequestContext(request))
+
+	return render(request, "solutions/solution_list.html",
+                {"formset": formset, "task":task, "solutions": solutions, "final_solution":final_solution, "attestationsPublished":attestationsPublished, "author":author, "invisible_attestor":get_settings().invisible_attestor})
+
 @login_required
 def test_upload(request, task_id):
         if not request.user.is_trainer and not request.user.is_tutor and not request.user.is_superuser:
@@ -109,9 +99,7 @@ def test_upload(request, task_id):
 	else:
 		formset = SolutionFormSet()
 	
-	return render_to_response("solutions/solution_test_upload.html",
-                {"formset": formset, "task":task},
-		context_instance=RequestContext(request))
+	return render(request, "solutions/solution_test_upload.html", {"formset": formset, "task":task})
 
 @login_required
 def test_upload_student(request, task_id):
@@ -132,9 +120,7 @@ def test_upload_student(request, task_id):
 	else:
 		formset = SolutionFormSet()
 	
-	return render_to_response("solutions/solution_test_upload.html",
-                {"formset": formset, "task":task},
-		context_instance=RequestContext(request))
+	return render("solutions/solution_test_upload.html", {"formset": formset, "task":task})
 
 @login_required
 def solution_detail(request,solution_id,full):
@@ -157,16 +143,25 @@ def solution_detail(request,solution_id,full):
 	else:
 		attestations = Attestation.objects.filter(solution__task=solution.task, author__tutored_tutorials=request.user.tutorial)
 		attestationsPublished = attestations[0].published if attestations else False
+		htmlinjectors = []
+		if full:
+			htmlinjectors = HtmlInjector.objects.filter(task = solution.task, inject_in_solution_full_view = True)
+		else:
+			htmlinjectors = HtmlInjector.objects.filter(task = solution.task, inject_in_solution_view      = True)
+		htmlinjector_snippets = [ injector.html_file.read() for injector in htmlinjectors ] 
 
-                return render_to_response(
+		
+
+
+                return render(request,
                     "solutions/solution_detail.html",
                     {
                         "solution": solution,
                         "attestationsPublished": attestationsPublished,
                         "accept_all_solutions": accept_all_solutions,
+			"htmlinjector_snippets": htmlinjector_snippets,
                         "full":full
-                    },
-                    context_instance=RequestContext(request))
+                    })
 
 @login_required
 def solution_download(request,solution_id,full):
@@ -194,7 +189,7 @@ def solution_download_for_task(request, task_id,full):
 
 @login_required
 def jplag(request, task_id):
-	if not (request.user.is_tutor or request.user.is_trainer):
+	if not (request.user.is_staff):
 		return access_denied(request)
 	task = get_object_or_404(Task, pk=task_id)
 
@@ -204,9 +199,7 @@ def jplag(request, task_id):
 
         jplag_lang = get_settings().jplag_setting
 
-	return render_to_response("solutions/jplag.html",
-                {"task":task, "jplag_lang": jplag_lang},
-		context_instance=RequestContext(request))
+	return render(request, "solutions/jplag.html", {"task":task, "jplag_lang": jplag_lang})
 
 
 @login_required
@@ -230,7 +223,7 @@ def checker_result_list(request,task_id):
 			                                [results[checker] if checker in results else None for (checker) in checkers_seen],
 			                                final_solution)
 
-		return render_to_response("solutions/checker_result_list.html", {"users_with_checkerresults": users_with_checkerresults,  'checkers_seen':checkers_seen, "task":task},context_instance=RequestContext(request))
+		return render(request, "solutions/checker_result_list.html", {"users_with_checkerresults": users_with_checkerresults,  'checkers_seen':checkers_seen, "task":task})
 
 @staff_member_required
 def solution_run_checker(request,solution_id):
