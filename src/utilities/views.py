@@ -45,7 +45,8 @@ def sendfile(request, path):
 		content_type = 'application/octet-stream' 
 	response['Content-Type'] = content_type
 	response['Content-Length'] = os.path.getsize(filename)
-	return response 
+	#return response
+	return serve(request, path, document_root=settings.UPLOAD_ROOT)
 
 def forbidden(request, path):
 	filename = os.path.join(settings.UPLOAD_ROOT, path)

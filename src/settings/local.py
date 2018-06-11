@@ -96,7 +96,7 @@ USESAFEDOCKER = True
 
 # Various extra files and versions
 CHECKSTYLEALLJAR = '/srv/praktomat/contrib/checkstyle-6.19-all.jar'
-JPLAGJAR = '/srv/praktomat/contrib/jplag-2.11.8-SNAPSHOT-jar-with-dependencies.jar'
+JPLAGJAR = '/srv/praktomat/contrib/jplag-2.11.9-SNAPSHOT-jar-with-dependencies.jar'
 JAVA_LIBS = { 'junit3' : '/usr/share/java/junit.jar', 'junit4' : '/usr/share/java/junit4.jar' }
 
 # Our VM has 20 cores, so lets try to use them

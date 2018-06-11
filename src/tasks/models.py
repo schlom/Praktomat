@@ -140,6 +140,7 @@ class Task(models.Model):
                 "-l", jplag_settings['param'],
                 "-p", jplag_settings['files'],
                 "-r", path,
+                "-s",
                 tmp]
             [output, error, exitcode,timed_out, oom_ed] = \
                 execute_arglist(args, path, unsafe=True)

@@ -36,36 +36,6 @@ class MyRegistrationForm(UserBaseCreationForm):
 	class Meta:
 		model = User
 		fields = ("username","first_name","last_name","email", "mat_number")
-
-	def clean_username(self):
-		data = self.cleaned_data['username']
-		if not data:
-			raise forms.ValidationError("This field is required")
-		try:
-			data.decode('ascii')
-		except Exception:
-			raise forms.ValidationError("Only ASCII characters are allowed!")
-		return data
-
-	def clean_first_name(self):
-		data = self.cleaned_data['first_name']
-		if not data:
-			raise forms.ValidationError("This field is required")
-		try:
-			data.decode('ascii')
-		except Exception:
-			raise forms.ValidationError("Only ASCII characters are allowed!")
-		return data
-
-	def clean_last_name(self):
-		data = self.cleaned_data['last_name']
-		if not data:
-			raise forms.ValidationError("This field is required")
-		try:
-			data.decode('ascii')
-		except Exception:
-			raise forms.ValidationError("Only ASCII characters are allowed!")
-		return data
 	
 	def clean_email(self):
 		# cleaning the email in the form doesn't validate it in the admin (good for tutors etc.)
